@@ -370,16 +370,10 @@
       }
       @media (width < 768px) {
         .sidebar-item span {
-          line-height: 40px;
+          /* line-height: 40px; */
           font-size: 40px;
         }
       }
-      /* @media (width < 400px) {
-        .sidebar-item span {
-          line-height: 36px;
-          font-size: 36px;
-        }
-      } */
       .small-text{
         font-size: 11px;
         font-weight: 400;
