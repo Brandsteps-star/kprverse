@@ -9,7 +9,7 @@ const MusicBarIcon = ({ color }) => {
   // Handle play/pause
   const togglePlay = () => {
     if (!audioRef.current) {
-      audioRef.current = new Audio('../../public/audio/bgm.mp3');
+      audioRef.current = new Audio('/audio/bgm.mp3');
       audioRef.current.loop = true;
     }
 
