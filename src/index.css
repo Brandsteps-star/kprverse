@@ -370,8 +370,9 @@
       }
       @media (width < 768px) {
         .sidebar-item span {
-          /* line-height: 40px; */
+          line-height: 40px;
           font-size: 40px;
+          padding: 4px;
         }
       }
       .small-text{
