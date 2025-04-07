@@ -20,32 +20,32 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                                 <ShuffleText text="Discover" />
                             </span>
                             <ul className="font-whyte-inktrap flex flex-col gap-3">
-                                <li>
+                                <li className="block">
                                     <a href="" className="sidebar-item active">
                                         <span className="font-black"><ShuffleText text="STORY" /></span>
                                     </a>
                                 </li>
-                                <li>
+                                <li className="block">
                                     <a href="" className="sidebar-item">
-                                        <span className="font-black"><ShuffleText text="PROTOCOL" /></span>
+                                        <span className="font-black flex items-center"><ShuffleText text="PROTOCOL" /></span>
                                     </a>
                                 </li>
-                                <li>
+                                <li className="block">
                                     <a href="" className="sidebar-item">
                                         <span className="font-black"><ShuffleText text="JOURNAL" /></span>
                                     </a>
                                 </li>
-                                <li>
+                                <li className="block">
                                     <a href="" className="sidebar-item">
                                         <span className="font-black"><ShuffleText text="MEDIA" /></span>
                                     </a>
                                 </li>
-                                <li>
+                                <li className="block">
                                     <a href="" className="sidebar-item">
                                         <span className="font-black"><ShuffleText text="GALLERY" /></span>
                                     </a>
                                 </li>
-                                <li>
+                                <li className="block">
                                     <a href="" className="sidebar-item">
                                         <span className="font-black"><ShuffleText text="ABOUT" /></span>
                                     </a>
