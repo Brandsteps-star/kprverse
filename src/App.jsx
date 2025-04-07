@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
-import { Section3 } from "./components/Section3";
+import {Section3} from "./components/Section3";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
