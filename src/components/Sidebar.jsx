@@ -8,7 +8,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
         
         // isSidebarOpen && 
         // ( 
-            <main className={`${className} w-full h-full ${isSidebarOpen ? 'left-0' : 'left-[-100%]'} fixed top-0 z-70 max-sm:p-0 transition-all duration-500 ease-in-out`}>
+            <main className={`${className} w-full h-screen ${isSidebarOpen ? 'left-0' : 'left-[-100%]'} fixed top-0 z-70 max-sm:p-0 transition-all duration-500 ease-in-out`}>
                 <section className="flex bg-black max-w-fit w-full h-full rounded-lg max-sm:rounded-none max-sm:max-w-full text-white ">
 
                     {/* Left side */}
