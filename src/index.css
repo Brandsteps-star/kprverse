@@ -362,10 +362,9 @@
       .sidebar-item span {
         position: relative;
         z-index: 1;
-        padding: 10px 10px 0 10px;
+        padding: 10px 4px 0 4px;
         line-height: 50px;
         font-size: 50px;
-        background: blue;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -376,7 +375,7 @@
       }
       @media (width < 768px) {
         .sidebar-item span {
-          font-size: 40px;
+          font-size: 36px;
         }
       }
       .small-text{
