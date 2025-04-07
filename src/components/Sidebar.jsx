@@ -19,7 +19,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                             <span className="extra-sm-text font-mono">
                                 <ShuffleText text="Discover" />
                             </span>
-                            <ul className="font-whyte-inktrap flex flex-col gap-1">
+                            <ul className="font-whyte-inktrap flex flex-col gap-3">
                                 <li>
                                     <a href="" className="sidebar-item active">
                                         <span className="font-black"><ShuffleText text="STORY" /></span>

@@ -328,6 +328,7 @@
         overflow: hidden;
         display: flex;
         align-items: center; 
+        background: red;
       }
       
       .sidebar-item::before {
@@ -336,7 +337,7 @@
         height: 100%;
         background: white;
         position: absolute;
-        top: 0%;
+        top: 0;
         left: 0;
         transform: translateX(-110%);
         transition: transform 0.3s ease-in-out;
@@ -362,8 +363,9 @@
         position: relative;
         z-index: 1;
         padding: 0 4px;
-        line-height: 50px;
+        /* line-height: 50px; */
         font-size: 50px;
+        background: green;
       }
 
       .sidebar-item:hover span{
