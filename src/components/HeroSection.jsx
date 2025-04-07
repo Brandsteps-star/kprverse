@@ -1,7 +1,7 @@
 export const HeroSection = () => {
     return(
         <section className="hero-section relative h-screen z-20 pt-24 px-8 pl-28  max-md:px-2 max-md:pt-16 w-full text-white">
-            <div className="flex flex-col justify-between gap-8 pb-8 max-sm:pr-0 pr-8 relative z-30 h-full mb-12">
+            <div className="flex flex-col justify-between gap-8 pb-8 max-sm:pb-16 max-sm:pr-0 pr-8 relative z-30 h-full mb-12">
                 <span className="w-[17rem] font-normal text-[13px] leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
                     KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story, an uncharted world waiting to be explored, to be imagined.
                 </span>
