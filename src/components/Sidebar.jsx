@@ -27,7 +27,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                                 </li>
                                 <li className="block">
                                     <a href="" className="sidebar-item">
-                                        <span className="font-black flex items-center"><ShuffleText text="PROTOCOL" /></span>
+                                        <span className="font-black"><ShuffleText text="PROTOCOL" /></span>
                                     </a>
                                 </li>
                                 <li className="block">

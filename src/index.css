@@ -363,9 +363,12 @@
         position: relative;
         z-index: 1;
         padding: 0 4px;
-        /* line-height: 50px; */
+        line-height: 50px;
         font-size: 50px;
-        background: green;
+        background: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .sidebar-item:hover span{
