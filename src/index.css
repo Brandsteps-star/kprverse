@@ -326,7 +326,7 @@
       .sidebar-item {
         position: relative;
         overflow: hidden;
-        display: inline-block;
+        display: block; 
       }
       
       .sidebar-item::before {
@@ -370,8 +370,7 @@
       }
       @media (width < 768px) {
         .sidebar-item span {
-          line-height: 40px;
-          font-size: 40px;
+          font-size: 28px;
         }
       }
       .small-text{
