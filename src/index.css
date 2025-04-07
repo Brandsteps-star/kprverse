@@ -362,7 +362,7 @@
       .sidebar-item span {
         position: relative;
         z-index: 1;
-        padding: 0 4px;
+        padding: 10px;
         line-height: 50px;
         font-size: 50px;
         background: blue;
