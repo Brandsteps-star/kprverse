@@ -328,7 +328,7 @@
         overflow: hidden;
         display: flex;
         align-items: center; 
-        background: red;
+        /* background: red; */
       }
       
       .sidebar-item::before {
