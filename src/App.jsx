@@ -17,6 +17,8 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const imgRef = useRef(null);
   const backgroundContainerRef = useRef(null);
+  const section3Ref = useRef(null);
+
 
   useEffect(() => {
 
@@ -85,19 +87,17 @@ function App() {
 
     gsap.fromTo(
       ".about-section",
-      { opacity: 0, y: 50 },
+      { opacity: 0, duration: 1, transitionDuration: 1 },
       {
         opacity: 1,
-        y: 100,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".about-section",
-          start: "top 90%",
-          end: "top 60%",
+          start: "top 5%",
+          end: "bottom 100%",
           scrub: true,
         },
       },
-      {opacity: 0, y: 100}
     );
 
     ScrollTrigger.create({
@@ -110,6 +110,38 @@ function App() {
         setBorderColor(progress > 0 ? 'border-[#0000002a]' : 'border-[#FFFFFF33]');
       }
     });
+
+    gsap.to(backgroundContainerRef.current, {
+      x: window.innerWidth > 768 ? "0%" : '0%',
+      y: window.innerWidth > 768 ? "0%" : "0%",
+      keyframes: {
+        scale: window.innerWidth > 768 ? [1] : [1]
+      },
+      ease: "none",
+      scrollTrigger: {
+        trigger: section3Ref.current,
+        start: "top 0%",
+        scrub: true,
+      },
+    });
+
+    gsap.to(imgRef.current, {
+      scale: 1.6,
+      x: 0,
+      y: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section3Ref.current,
+        start: "top 0%",
+        scrub: true,
+        markers: true
+      },
+    });
+ 
+    
   }, []);
 
   return (
@@ -131,7 +163,7 @@ function App() {
         
         <HeroSection />
         <AboutSection />
-        <Section3 />
+        <Section3 ref={section3Ref} />
       </div>
 
       <div className={`fixed z-50 pointer-events-none max-md:!border-none border ${borderColor} max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>

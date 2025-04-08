@@ -11,25 +11,23 @@ export const AboutSection = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".about-section .section-title", {
-        opacity: 0,
-        y: 50,
-        duration: 4,
-        ease: "bounce.out",
+        scale:0,
+        duration: 1,
+        ease: "power3.inOut",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 100%",
+          start: "top 5%",
         },
       })
 
       gsap.from(".about-section .image-tilt", {
-        opacity: 0,
-        y: 30,
-        duration: 4,
+        scale:0,
+        duration: 1,
         stagger: 0.2,
-        ease: "bounce.out",
+        ease: "power3.inOut",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 100%",
+          start: "top 5%",
         },
       })
     }, sectionRef)
@@ -79,8 +77,8 @@ export const AboutSection = () => {
         </div>
 
         {/* Right Side */}
-        <div className="w-[37%] h-[86vh] border-l border-[#0000002a] p-4 max-md:hidden image-tilt">
-          <div className="h-full w-full flex items-center justify-between p-4">
+        <div className="w-[37%] h-[86vh] border-l border-[#0000002a] p-4 max-md:hidden">
+          <div className="h-full w-full flex items-center justify-between p-4 image-tilt">
             <ImageTilt
               src="./images/about-image.png"
               alt="About Image"

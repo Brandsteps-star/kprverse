@@ -6,8 +6,8 @@ export const Section3 = forwardRef((props, ref) => {
       ref={ref}
       className="section3 min-h-screen w-full relative z-20 flex justify-center font-whyte-inktrap"
     >
-      <div className="h-full w-[97vw] max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col">
-        <div className="relative z-20 bg-black/60 p-8 rounded-lg backdrop-blur-sm max-w-3xl">
+      <div className="h-full mt-[500px] w-[97vw] max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col">
+        <div className="relative z-20  p-8 rounded-lg">
           <h2 className="text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black tracking-[-2px] text-white mb-6">
             EXPERIENCE THE WORLD
           </h2>
