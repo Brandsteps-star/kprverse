@@ -17,7 +17,6 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const imgRef = useRef(null);
   const backgroundContainerRef = useRef(null);
-  const section3Ref = useRef(null);
 
 
   useEffect(() => {
@@ -100,6 +99,46 @@ function App() {
       },
     );
 
+    gsap.to(
+      ".about-section",
+      {
+        opacity: 0,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top -20%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      },
+    )
+    gsap.to(
+      backgroundContainerRef.current,
+      {
+        opacity: 0,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top -10%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      },
+    )
+    gsap.to(
+      imgRef.current,
+      {
+        opacity: 0,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top -10%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      },
+    )
+
     ScrollTrigger.create({
       trigger: ".about-section",
       start: "top bottom",
@@ -111,35 +150,16 @@ function App() {
       }
     });
 
-    gsap.to(backgroundContainerRef.current, {
-      x: window.innerWidth > 768 ? "0%" : '0%',
-      y: window.innerWidth > 768 ? "0%" : "0%",
-      keyframes: {
-        scale: window.innerWidth > 768 ? [1] : [1]
-      },
-      ease: "none",
-      scrollTrigger: {
-        trigger: section3Ref.current,
-        start: "top 0%",
+    ScrollTrigger.create({
+        trigger: ".section3",
+        start: "top 0%", 
+        end: "bottom top",
         scrub: true,
-      },
-    });
-
-    gsap.to(imgRef.current, {
-      scale: 1.6,
-      x: 0,
-      y: 0,
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: section3Ref.current,
-        start: "top 0%",
-        scrub: true,
-        markers: true
-      },
-    });
+        onUpdate: self => {
+          const progress = self.progress;
+          setBorderColor(progress > 0 ? 'border-[#FFFFFF33]' : 'border-[#0000002a]');
+        } 
+    })
  
     
   }, []);
@@ -163,7 +183,7 @@ function App() {
         
         <HeroSection />
         <AboutSection />
-        <Section3 ref={section3Ref} />
+        <Section3 />
       </div>
 
       <div className={`fixed z-50 pointer-events-none max-md:!border-none border ${borderColor} max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>

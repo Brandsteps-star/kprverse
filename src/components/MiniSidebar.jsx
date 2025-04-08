@@ -41,6 +41,35 @@ export const MiniSidebar = ({className = ""}) => {
     }
   }, []);
 
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section3',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+        onUpdate: self => {
+          const progress = self.progress;
+          
+          // Color changes at 0% scroll progress
+          if (progress > 0) {
+            setIconColor('white');
+            setLogoColor('');
+            setBorderColor('border-[#FFFFFF33]');
+          } else {
+            setIconColor('black');
+            setLogoColor('invert');
+            setBorderColor('border-[#0000002a]');
+          }
+        }
+      }
+    });
+
+    return () => {
+      tl.kill(); // Clean up the animation
+    }
+  }, []);
+
   return (
     <div 
       ref={miniSidebarRef} 

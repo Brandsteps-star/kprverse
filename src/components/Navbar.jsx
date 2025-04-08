@@ -60,6 +60,54 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
     }, [])
 
     useEffect(() => {
+        // Color change animation
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section3", 
+                start: "top bottom", 
+                end: "bottom top", 
+                scrub: true,
+                onUpdate: self => {
+                    const progress = self.progress
+                    
+                    // Interpolate between white and black based on scroll progress
+                    gsap.to(navRef.current, {
+                        color: progress > 0 ? 'white' : 'black',
+                    })
+
+                    // Change login button colors
+                    const loginBtn = navRef.current.querySelector('.login-btn')
+                    gsap.to(loginBtn, {
+                        backgroundColor: progress > 0 ? 'white' : 'black',
+                        color: progress > 0 ? 'black' : 'white'
+                    })
+
+                    // Change SVG stroke color
+                    const menuIcon = navRef.current.querySelector('svg')
+                    gsap.to(menuIcon, {
+                        stroke: progress > 0 ? 'white' : 'black'
+                    })
+
+                    if (progress > 0) {
+                        setBorderColor('border-[#FFFFFF33]');
+                        setProgressColor('bg-[#FFFFFF33]');
+                        setProgressBorderColor('border-[#FFFFFF66]');
+                    } else {
+                         setBorderColor('border-[#0000002a]');
+                        setProgressColor('bg-[#1A1A1A11]');
+                        setProgressBorderColor('border-[#1A1A1A33]');
+                      }
+                }
+            }
+        })
+
+        return () => {
+            tl.kill() // Clean up the animation
+        }
+    }, [])
+
+
+    useEffect(() => {
         const updateProgress = () => {
             const totalHeight = document.body.scrollHeight - window.innerHeight;
             const scrollProgress = (window.scrollY / totalHeight) * 100;
