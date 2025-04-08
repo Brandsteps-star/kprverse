@@ -60,7 +60,7 @@ export const AboutSection = () => {
 
           {/* Left Side Bottom */}
           <div className="p-8 flex flex-col justify-between max-sm:justify-end gap-4 h-full">
-            <div className="w-1/4 max-sm:w-full image-tilt">
+            <div className="w-1/4 max-sm:hidden image-tilt">
               <ImageTilt
                 src="./images/trailer-side-media.webp"
                 alt="tailer side media"
