@@ -6,7 +6,7 @@ export const Section4 = () => {
               className="section4 mt-[200px] w-full max-sm:min-h-screen relative z-20 flex justify-center font-whyte-inktrap overflow-hidden"
             >
               <div className="w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col max-sm:flex-col-reverse">
-                    <div className="flex items-center justify-center w-[20vw] h-full max-sm:w-full">
+                    <div className="flex items-center justify-center w-[20vw] h-full max-sm:w-full max-sm:mt-6">
                         <div className="rotate-270 max-sm:rotate-0 h-[20vw] max-sm:h-full flex flex-col">
                             <h1 className="text-[20vw] leading-[20vw] font-black max-sm:text-[42vw] max-sm:leading-[42vw]">10K</h1>
                             <span className="mt-[-20px] font-mono small-text flex items-center gap-2">
