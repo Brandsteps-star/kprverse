@@ -63,9 +63,56 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
         // Color change animation
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".section3", 
+                trigger: ".section4", 
                 start: "top bottom", 
                 end: "bottom top", 
+                scrub: true,
+                onUpdate: self => {
+                    const progress = self.progress
+                    
+                    // Interpolate between white and black based on scroll progress
+                    gsap.to(navRef.current, {
+                        color: progress > 0 ? 'black' : 'white',
+                    })
+
+                    // Change login button colors
+                    const loginBtn = navRef.current.querySelector('.login-btn')
+                    gsap.to(loginBtn, {
+                        backgroundColor: progress > 0 ? 'black' : 'white',
+                        color: progress > 0 ? 'white' : 'black'
+                    })
+
+                    // Change SVG stroke color
+                    const menuIcon = navRef.current.querySelector('svg')
+                    gsap.to(menuIcon, {
+                        stroke: progress > 0 ? 'black' : 'white'
+                    })
+
+                    if (progress > 0) {
+                        setBorderColor('border-[#0000002a]');
+                        setProgressColor('bg-[#1A1A1A11]');
+                        setProgressBorderColor('border-[#1A1A1A33]');
+                    } else {
+                        setBorderColor('border-[#FFFFFF33]');
+                        setProgressColor('bg-[#FFFFFF33]');
+                        setProgressBorderColor('border-[#FFFFFF66]');
+                      }
+                }
+            }
+        })
+
+        return () => {
+            tl.kill() // Clean up the animation
+        }
+    }, [])
+
+    useEffect(() => {
+        // Color change animation
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section3",
+                start: "top 0%", 
+                end: "bottom top",
                 scrub: true,
                 onUpdate: self => {
                     const progress = self.progress

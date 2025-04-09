@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import {Section3} from "./components/Section3";
+import { Section4 } from "./components/Section4";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -149,6 +150,17 @@ function App() {
         setBorderColor(progress > 0 ? 'border-[#0000002a]' : 'border-[#FFFFFF33]');
       }
     });
+    
+    ScrollTrigger.create({
+      trigger: ".section4",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+      onUpdate: self => {
+        const progress = self.progress;
+        setBorderColor(progress > 0 ? 'border-[#0000002a]' : 'border-[#FFFFFF33]');
+      }
+    });
 
     ScrollTrigger.create({
         trigger: ".section3",
@@ -160,7 +172,6 @@ function App() {
           setBorderColor(progress > 0 ? 'border-[#FFFFFF33]' : 'border-[#0000002a]');
         } 
     })
- 
     
   }, []);
 
@@ -168,7 +179,7 @@ function App() {
     <>
     <LenisSmoothScroll />
     <main className="relative w-full min-h-screen overflow-x-hidden">
-      <div className="relative w-full min-h-screen pb-16 z-40">
+      <div className="relative w-full min-h-screen z-40">
         <div
           ref={backgroundContainerRef}
           className="fixed inset-0 w-full h-full z-0 overflow-hidden"
@@ -184,6 +195,7 @@ function App() {
         <HeroSection />
         <AboutSection />
         <Section3 />
+        <Section4 />
       </div>
 
       <div className={`fixed z-50 pointer-events-none max-md:!border-none border ${borderColor} max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>

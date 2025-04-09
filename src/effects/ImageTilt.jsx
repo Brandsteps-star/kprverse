@@ -54,7 +54,7 @@ const ImageTilt = ({
   return (
     <div 
       ref={cardRef}
-      className={`tilt-container relative w-full h-full transition-transform duration-${speed} ${className}`}
+      className={`tilt-container relative w-full h-full transition-transform duration-${speed} `}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -67,7 +67,7 @@ const ImageTilt = ({
       <img 
         src={src} 
         alt={alt} 
-        className="w-full h-full object-cover rounded-lg" 
+        className={`w-full h-full object-cover rounded-lg ${className}`}
         style={{
           transform: 'translateZ(20px)',
           willChange: 'transform'

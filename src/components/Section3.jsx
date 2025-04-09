@@ -1,16 +1,38 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import ImageTilt from "../effects/ImageTilt";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Section3 = forwardRef(() => {
+  const bgImageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(
+      bgImageRef.current,
+      {
+        scale: 0,
+        scrollTrigger: {
+          trigger: ".section3",
+          start: "top 100%",
+          scrub: true
+        }
+      }
+    );
+  }, [])
+
   return (
     <section
-      className="section3 min-h-screen w-full relative z-20 flex justify-center font-whyte-inktrap bg-[url(/images/hero-2.webp)] bg-center bg-cover bg-no-repeat"
+      className="section3 min-h-screen w-full relative z-20 flex justify-center font-whyte-inktrap"
     >
+      <img src="/images/hero-2.webp" className="absolute top-0 left-0 h-full w-full scale-[1.5]" ref={bgImageRef} alt="" />
       <div className="h-full w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col">
         {/* Left Side */}
         <div className="relative flex flex-col max-md:w-full w-[62%] h-[86vh] text-white">
           {/* Left Side Top */}
-          <div className="px-6 py-8 h-[100%] max-md:p-2 border-b border-[#0000002a]">
+          <div className="px-6 py-8 h-[100%] max-md:p-2 border-b border-[#FFFFFF33]">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">002</span>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px] uppercase">
@@ -46,7 +68,7 @@ export const Section3 = forwardRef(() => {
         </div>
 
         {/* Right Side */}
-        <div className="w-[37%] h-[86vh] border-l border-[#0000002a] p-4 max-md:hidden">
+        <div className="w-[37%] h-[86vh] border-l border-[#FFFFFF33] p-4 max-md:hidden">
           <div className="h-full w-full flex items-center justify-between p-4 image-tilt">
             
           </div>
@@ -56,5 +78,4 @@ export const Section3 = forwardRef(() => {
   );
 });
 
-// Add display name for DevTools
 Section3.displayName = "Section3";
