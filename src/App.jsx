@@ -9,6 +9,7 @@ import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import {Section3} from "./components/Section3";
 import { Section4 } from "./components/Section4";
+import { Section5 } from "./components/Section5";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -196,6 +197,7 @@ function App() {
         <AboutSection />
         <Section3 />
         <Section4 />
+        <Section5 />
       </div>
 
       <div className={`fixed z-50 pointer-events-none max-md:!border-none border ${borderColor} max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>
