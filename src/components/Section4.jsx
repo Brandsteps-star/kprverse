@@ -44,7 +44,6 @@ export const Section4 = () => {
         start: "top 100%", // Adjust when animation starts
         end: "top 0%", // Adjust when animation ends
         scrub: 1, // Smooth scrubbing effect
-        markers: true // Uncomment for debugging
       }
     })
 

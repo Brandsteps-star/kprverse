@@ -72,9 +72,9 @@ export const AboutSection = () => {
                 }}
               />
             </div>
-            <h1 className="block w-1/4 max-sm:w-full text-[13px] leading-[16px] section-title">
+            <h6 className="block w-1/4 max-sm:w-full text-[13px] leading-[16px] section-title">
               Isolated within the New Eden safe zone, you witness humanity struggling to avoid descending into chaos.
-            </h1>
+            </h6>
           </div>
         </div>
 

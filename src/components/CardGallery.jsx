@@ -54,16 +54,16 @@ export default function PerspectiveCardGallery() {
   };
 
   return (
-    <div className="flex h-screen ">
+    <div className="flex h-[350px]">
       {/* Left Side */}
       <div className="flex items-center relative overflow-hidden w-1/2">
-        <div className="relative w-full flex items-center" style={{ perspective: "500px", transformStyle: "preserve-3d", perspectiveOrigin: "right center" }}>
+        <div className="relative w-full flex items-center" style={{ perspective: "740px", transformStyle: "preserve-3d", perspectiveOrigin: "right center" }}>
           {[1, 2, 3, 4, 5, 6].map((num, index) => (
             <img
               key={`left-${num}`}
               src={`https://kprverse.com/images/compressed/webp/collection/card-left-0${num}.webp`}
               alt={`Card ${num}`}
-              className="absolute w-48 h-56 transition-transform duration-300"
+              className="absolute w-[250px] h-[282px] transition-transform duration-300"
               style={{
                 right: "-10rem",
                 transform: getLeftTransform(index),
@@ -76,13 +76,13 @@ export default function PerspectiveCardGallery() {
       
       {/* Right Side */}
       <div className="flex items-center relative overflow-hidden w-1/2">
-        <div className="relative w-full flex items-center" style={{ perspective: "500px", transformStyle: "preserve-3d", perspectiveOrigin: "left center" }}>
+        <div className="relative w-full flex items-center" style={{ perspective: "1210px", transformStyle: "preserve-3d", perspectiveOrigin: "left center" }}>
           {[1, 2, 3, 4, 5, 6].map((num, index) => (
             <img
               key={`right-${num}`}
               src={`https://kprverse.com/images/compressed/webp/collection/card-right-0${num}.webp`}
               alt={`Card ${num}`}
-              className="absolute w-48 h-56 transition-transform duration-300"
+              className="absolute w-[250px] h-[282px] transition-transform duration-300"
               style={{
                 left: "-10rem",
                 transform: getRightTransform(index),
