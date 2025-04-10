@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function PerspectiveCardGallery() {
+export default function PerspectiveCardGallery({ className }) {
   // Define the perspective transformations for each side
   const leftPerspectives = [
     { x: -10, z: -4 },
@@ -54,7 +54,7 @@ export default function PerspectiveCardGallery() {
   };
 
   return (
-    <div className="flex h-[350px]">
+    <div className={`flex h-[350px] ${className}`}>
       {/* Left Side */}
       <div className="flex items-center relative overflow-hidden w-1/2">
         <div className="relative w-full flex items-center" style={{ perspective: "740px", transformStyle: "preserve-3d", perspectiveOrigin: "right center" }}>

@@ -24,6 +24,44 @@ export const Section4 = () => {
         },
       }
     );
+    gsap.from(".text", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.inOut",
+      scrollTrigger: {
+          trigger: ".section4",
+          start: "top 0%",
+          end: "top bottom",
+          scrub: 1,
+          markers: true,
+      }
+    })
+    gsap.from(".border-animation", {
+      opacity: 0,
+      duration: 1,
+      ease: "power3.inOut",
+      scrollTrigger: {
+          trigger: ".section4",
+          start: "top 0%",
+          end: "top bottom",
+          scrub: 1,
+          markers: true,
+      }
+    })
+    gsap.from(".image", {
+      opacity: 0,
+      scale: 0,
+      duration: 1,
+      ease: "power3.inOut",
+      scrollTrigger: {
+          trigger: ".section4",
+          start: "top 0%",
+          end: "top bottom",
+          scrub: 1,
+          markers: true,
+      }
+    })
   }, []);
 
   // Animation for the background boxes
@@ -91,7 +129,7 @@ export const Section4 = () => {
       {/* Content */}
       <div className="w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col max-sm:flex-col-reverse">
         <div className="flex items-center justify-center w-[20vw] h-full max-sm:w-full max-sm:mt-8">
-          <div className="rotate-270 max-sm:rotate-0 h-[20vw] max-sm:h-full flex flex-col">
+          <div className="rotate-270 max-sm:rotate-0 h-[20vw] max-sm:h-full flex flex-col text">
             <h1 className="text-[20vw] leading-[20vw] font-black max-sm:text-[42vw] max-sm:leading-[42vw]">
               10K
             </h1>
@@ -129,13 +167,13 @@ export const Section4 = () => {
               }}
             />
           </div>
-          <div className="absolute w-[1px] bg-[#0000002a] h-[87vh] bottom-0 right-0 mb-6 max-sm:hidden"></div>
+          <div className="absolute w-[1px] bg-[#0000002a] h-[87vh] bottom-0 right-0 mb-6 max-sm:hidden border-animation"></div>
         </div>
         <div className="w-[30vw] h-full flex flex-col justify-center max-sm:hidden">
-          <div className="h-[50%] p-6 relative border-b border-[#0000002a]">
+          <div className="h-[50%] p-6 relative border-b border-[#0000002a] border-animation">
             <ImageTilt
               src="/images/face-traits.webp"
-              className=""
+              className="image"
               tiltOptions={{
                 max: 40,
                 scale: 0.9,
@@ -144,10 +182,10 @@ export const Section4 = () => {
               }}
             />
           </div>
-          <div className="h-[40%] p-6">
+          <div className="h-[40%] p-6 ">
             <ImageTilt
               src="/images/face-traits.webp"
-              className=""
+              className="image"
               tiltOptions={{
                 max: 40,
                 scale: 0.9,

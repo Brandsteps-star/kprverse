@@ -45,7 +45,7 @@ export const Section3 = forwardRef(() => {
       className="section3 min-h-screen w-full relative z-20 flex flex-col justify-center font-whyte-inktrap"
     >
       {/* <img src="/images/hero-2.webp" className="absolute top-0 left-0 h-full w-full scale-[1.5]" ref={bgImageRef} alt="" /> */}
-      <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-10">
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none z-10">
         <img src="/images/face-traits.webp" className="absolute object-cover w-[1300px] h-[1300px] scale-0 rounded-xl s3image" />
       </div>
       <div className="h-full mt-[1500px] w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col">
