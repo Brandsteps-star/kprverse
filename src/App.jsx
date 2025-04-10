@@ -117,11 +117,14 @@ function App() {
     gsap.to(
       backgroundContainerRef.current,
       {
-        opacity: 0,
+        keyframes: {scale: 0},
+        x: "20%",
+        // left: "50%",
+        y: "50",
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".about-section",
-          start: "top -10%",
+          trigger: ".section3",
+          start: "top 50%",
           end: "bottom 100%",
           scrub: true,
         },
@@ -130,16 +133,20 @@ function App() {
     gsap.to(
       imgRef.current,
       {
-        opacity: 0,
-        ease: "power2.out",
+        scale: 0,
+        width: 0,
+        height: 0,
+        // objectFit: "contain",
         scrollTrigger: {
-          trigger: ".about-section",
-          start: "top -10%",
+          trigger: ".section3",
+          start: "top 50%",
           end: "bottom 100%",
           scrub: true,
         },
-      },
+      }
     )
+
+    
 
     ScrollTrigger.create({
       trigger: ".about-section",

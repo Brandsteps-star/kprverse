@@ -56,21 +56,21 @@ export const Section4 = () => {
     // First background box animation
     tl.fromTo(
       ".bg-block1",
-      { scale: 0, transformOrigin: "center" },
-      { scale: 1.1, duration: 1, ease: "power3.inOut" }
+      { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
+      { scale: 1.1, y: 0, duration: 1, ease: "power3.inOut" }
     );
 
     // Second background box animation (starts after first is 50% complete)
     tl.fromTo(
       ".bg-block2",
-      { scale: 0, transformOrigin: "center" },
-      { scale: 1.2, duration: 1, ease: "power3.inOut" },
+      { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
+      { scale: 1.2, y: 0, duration: 1, ease: "power3.inOut" },
       "-=0.5" // Overlap with previous animation
     );
     tl.fromTo(
       ".bg-block3",
-      { scale: 0, transformOrigin: "center" },
-      { scale: 1.3, duration: 1, ease: "power3.inOut" },
+      { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
+      { scale: 1.3, y: 0, duration: 1, ease: "power3.inOut" },
       "-=0.10" // Overlap with previous animation
     );
   }, []);
@@ -78,7 +78,7 @@ export const Section4 = () => {
   return (
     <section className="section4 mt-[200px] w-full max-sm:min-h-screen relative z-20 flex justify-center font-whyte-inktrap overflow-hidden">
       {/* Background layers - positioned in stacking order */}
-      <div className="fixed top-0 left-0 w-[1300px] h-screen flex items-center justify-center pointer-events-none z-10">
+      <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-10">
         <div className="absolute w-[1300px] h-[1300px] bg-purple-400 bg-block1 scale-0 rounded-xl"></div>
       </div>
       <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-20">
