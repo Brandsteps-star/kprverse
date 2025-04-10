@@ -8,10 +8,10 @@ export const Section5 = () => {
                 <div className="h-[25vh] max-sm:h-[10vh] flex items-center justify-start p-4 max-md:p-2 text-white border-b  border-[#ffffff2a]">
                     <div className="relative">
                     <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">004</span>
-                    <h3 className="section-title uppercase text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[25px] max-sm:leading-[32px] max-sm:tracking-0 font-black pl-20 tracking-[-2px]">
+                    <h3 className="section-title uppercase text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px]">
                         10,000 unique digital
                     </h3>
-                    <h3 className="section-title uppercase text-[44px] leading-[44px] max-md:text-[30px]  max-sm:text-[25px] max-sm:leading-[32px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px]">
+                    <h3 className="section-title uppercase text-[44px] leading-[44px] max-md:text-[30px]  max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px]">
                         collectibles.
                     </h3>
                     </div>
