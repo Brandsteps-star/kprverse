@@ -24,7 +24,7 @@ export const Section4 = () => {
         },
       }
     );
-    gsap.from(".text", {
+    gsap.from(".section4 .text", {
       opacity: 0,
       y: 50,
       duration: 1,
@@ -34,10 +34,9 @@ export const Section4 = () => {
           start: "top 0%",
           end: "top bottom",
           scrub: 1,
-          markers: true,
       }
     })
-    gsap.from(".border-animation", {
+    gsap.from(".section4 .border-animation", {
       opacity: 0,
       duration: 1,
       ease: "power3.inOut",
@@ -46,10 +45,9 @@ export const Section4 = () => {
           start: "top 0%",
           end: "top bottom",
           scrub: 1,
-          markers: true,
       }
     })
-    gsap.from(".image", {
+    gsap.from(".section4 .image", {
       opacity: 0,
       scale: 0,
       duration: 1,
@@ -59,7 +57,6 @@ export const Section4 = () => {
           start: "top 0%",
           end: "top bottom",
           scrub: 1,
-          markers: true,
       }
     })
   }, []);

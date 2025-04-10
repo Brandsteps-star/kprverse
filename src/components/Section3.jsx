@@ -24,16 +24,15 @@ export const Section3 = forwardRef(() => {
       { scale: 1.1, y: 0, ease: "power3.inOut" }
     );
 
-    tl.from(".s3image", 
-       {
+    gsap.to(".s3image", 
+      {
       scale: 0,
-      duration: 2,
       ease: "power3.inOut",
       scrollTrigger: {
         trigger: ".section4",
         start: "top 20%",
         end: "center center",
-        scrub: 1,
+        scrub: true,
       },
     })
 

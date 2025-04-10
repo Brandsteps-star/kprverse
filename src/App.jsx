@@ -101,19 +101,19 @@ function App() {
       },
     );
 
-    gsap.to(
-      ".about-section",
-      {
-        opacity: 0,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".about-section",
-          start: "top -20%",
-          end: "bottom 100%",
-          scrub: true,
-        },
-      },
-    )
+    // gsap.to(
+    //   ".about-section",
+    //   {
+    //     opacity: 0,
+    //     ease: "power2.out",
+    //     scrollTrigger: {
+    //       trigger: ".about-section",
+    //       start: "top -20%",
+    //       end: "bottom 100%",
+    //       scrub: true,
+    //     },
+    //   },
+    // )
     gsap.to(
       backgroundContainerRef.current,
       {
