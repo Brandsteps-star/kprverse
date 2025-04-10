@@ -12,8 +12,8 @@ export const Section3 = forwardRef(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section3",
-        start: "top 50%",
-        end: "bottom 100%",
+        start: "top 30%",
+        end: "top -30%",
         scrub: true,
       },
     });
@@ -39,19 +39,28 @@ export const Section3 = forwardRef(() => {
 
   }, [])
 
+  const terminalText = [
+    "//INITIALIZING",
+    "KEEPER STORY",
+    "",
+    "LOADING...[47%]",
+    "",
+    "LOCATION_DATA",
+    "CHARACTER_ATTRIBUTES",
+    "KLMX TRANSMISSIONS",
+  ];
+
   return (
     <section
       className="section3 min-h-screen w-full relative z-20 flex flex-col justify-center font-whyte-inktrap"
     >
-      {/* <img src="/images/hero-2.webp" className="absolute top-0 left-0 h-full w-full scale-[1.5]" ref={bgImageRef} alt="" /> */}
       <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none z-10">
-        <img src="/images/face-traits.webp" className="absolute object-cover w-[1300px] h-[1300px] scale-0 rounded-xl s3image" />
+        <img src="/images/section3-image.png" className="absolute object-cover w-[1300px] h-[1300px] scale-0 rounded-xl s3image" />
       </div>
-      <div className="h-full mt-[1500px] w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col">
-        {/* Left Side */}
-        <div className="relative flex flex-col max-md:w-full w-[62%] h-[86vh] text-white">
-          {/* Left Side Top */}
-          <div className="px-6 py-8 h-[100%] max-md:p-2 border-b border-[#FFFFFF33]">
+      <div className="h-full mt-[700px] max-sm:mt-[950px] w-[98vw] max-md:w-full max-md:pl-0 pl-[82px] pt-[70px] z-30 relative max-md:flex-col">
+        {/* Row 1 */}
+        <div className="relative h-[60vh] flex max-sm:items-end max-sm:h-[30vh] max-md:w-full w-full text-white  border-y border-[#FFFFFF33]">
+          <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-none">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">002</span>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px] uppercase">
@@ -66,77 +75,64 @@ export const Section3 = forwardRef(() => {
             </div>
           </div>
 
-          {/* Left Side Bottom */}
-          <div className="p-8 flex flex-col justify-between max-sm:justify-end gap-4 h-full z-30">
-            <div className="w-1/4 max-sm:w-full image-tilt">
-              <ImageTilt
-                src="./images/trailer-side-media.webp"
-                alt="tailer side media"
-                tiltOptions={{
-                  max: 20,
-                  scale: 1,
-                  perspective: 1200,
-                  speed: 400,
-                }}
-              />
-            </div>
-            <h1 className="block w-1/4 max-sm:w-full text-[13px] leading-[16px] section-title">
-              Isolated within the New Eden safe zone, you witness humanity struggling to avoid descending into chaos.
-            </h1>
+          <div className="p-8  w-[30%] z-30 max-sm:hidden">
+            {terminalText.map((line, index) => (
+              <p className="block max-sm:w-full text-[6px] leading-[10px] section-title font-mono" key={index}>{line}</p>
+            ))}
           </div>
         </div>
+        {/* Row 2 */}
+        <div className="relative h-[60vh] max-sm:h-[20vh] flex max-md:w-full w-full text-white  border-b border-[#FFFFFF33]">
+          <div className="px-6 py-8 w-[70%] max-sm:w-[50%] max-md:p-2 border-r border-[#FFFFFF33]"></div>
 
-        {/* Right Side */}
-        <div className="w-[37%] h-[86vh] border-l border-[#FFFFFF33] p-4 max-md:hidden">
-          <div className="h-full w-full flex items-center justify-between p-4 image-tilt">
-            
+          <div className="p-8 w-[30%] max-sm:w-[50%] z-30">
+            <div className="w-full flex items-center justify-between">
+              <div>
+              {["N 35°27.37","E 139°38.57"].map((line, index) => (
+                <p className="block max-sm:w-full text-[7px] leading-[10px] section-title font-mono" key={index}>{line}</p>
+              ))}
+            </div>
+            <img src="https://kprverse.com/svg/degrees.svg" alt="Degrees" className="w-12" />
+            </div>
+          <div className="">
+            <video playsInline loop autoPlay muted className="w-full">
+              <source src="https://kprverse.com/videos/project/topo-landing.mp4" type="video/mp4" />
+              <source src="https://kprverse.com/videos/project/topo-landing.webm" type="video/webm" />
+            </video>
+          </div>
           </div>
         </div>
-      </div>
-      <div className="h-full w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col">
-        {/* Left Side */}
-        <div className="relative flex flex-col max-md:w-full w-[62%] h-[86vh] text-white">
-          {/* Left Side Top */}
-          <div className="px-6 py-8 h-[100%] max-md:p-2 border-b border-[#FFFFFF33]">
+        {/* Row 3 */}
+        <div className="relative h-[50vh] max-sm:h-[15vh] flex max-sm:items-center max-md:w-full w-full text-white  border-b border-[#FFFFFF33]">
+          <div className="px-6 py-8 w-[30%] max-md:p-2 border-r border-[#FFFFFF33] relative max-sm:hidden">
+            <div className="absolute top-[-67px] left-50 rotate-[45deg] h-[142%] w-[1px] bg-[#ffffff33]"></div>
+          </div>
+
+          <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-r-0">
             <div className="relative">
-              <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">002</span>
+              <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">003</span>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px] uppercase">
-                You are a Keeper: an agent
+              What will you do with this
               </h3>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
-              of power and change in this
+              power? Will you choose to
               </h3>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
-              world.
+              protect or destroy? To give
+              </h3>
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
+              or to take?
               </h3>
             </div>
-          </div>
-
-          {/* Left Side Bottom */}
-          <div className="p-8 flex flex-col justify-between max-sm:justify-end gap-4 h-full z-30">
-            <div className="w-1/4 max-sm:w-full image-tilt">
-              <ImageTilt
-                src="./images/trailer-side-media.webp"
-                alt="tailer side media"
-                tiltOptions={{
-                  max: 20,
-                  scale: 1,
-                  perspective: 1200,
-                  speed: 400,
-                }}
-              />
-            </div>
-            <h1 className="block w-1/4 max-sm:w-full text-[13px] leading-[16px] section-title">
-              Isolated within the New Eden safe zone, you witness humanity struggling to avoid descending into chaos.
-            </h1>
           </div>
         </div>
-
-        {/* Right Side */}
-        <div className="w-[37%] h-[86vh] border-l border-[#FFFFFF33] p-4 max-md:hidden">
-          <div className="h-full w-full flex items-center justify-between p-4 image-tilt">
-            
+        {/* Row 4 */}
+        <div className="relative h-[100vh] max-sm:hidden flex max-md:w-full w-full text-white  border-b border-[#FFFFFF33]">
+          <div className="px-6 py-8 h-[100%] w-[30%] max-md:p-2 border-r border-[#FFFFFF33] relative"></div>
+          <div className="px-6 py-8 h-[100%] w-[35%] max-md:p-2 border-r border-[#FFFFFF33] relative">
+          <p className="block max-sm:w-full text-[9px] leading-[9px] section-title uppercase font-mono">Keepers <br /> Symbol</p>
           </div>
+          <div className="px-6 py-8 h-[100%] w-[35%] max-md:p-2 relative"></div>
         </div>
       </div>
     </section>

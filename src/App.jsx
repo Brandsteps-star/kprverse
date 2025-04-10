@@ -20,7 +20,6 @@ function App() {
   const imgRef = useRef(null);
   const backgroundContainerRef = useRef(null);
 
-
   useEffect(() => {
 
     gsap.to(backgroundContainerRef.current, {
@@ -101,19 +100,6 @@ function App() {
       },
     );
 
-    // gsap.to(
-    //   ".about-section",
-    //   {
-    //     opacity: 0,
-    //     ease: "power2.out",
-    //     scrollTrigger: {
-    //       trigger: ".about-section",
-    //       start: "top -20%",
-    //       end: "bottom 100%",
-    //       scrub: true,
-    //     },
-    //   },
-    // )
     gsap.to(
       backgroundContainerRef.current,
       {
@@ -124,8 +110,8 @@ function App() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".section3",
-          start: "top 50%",
-          end: "bottom 100%",
+          start: "top 30%",
+          end: "top -30%",
           scrub: true,
         },
       },
@@ -138,9 +124,9 @@ function App() {
         height: 0,
         // objectFit: "contain",
         scrollTrigger: {
-          trigger: ".section3",
-          start: "top 50%",
-          end: "bottom 100%",
+           trigger: ".section3",
+           start: "top 30%",
+           end: "top -30%",
           scrub: true,
         },
       }
@@ -180,8 +166,9 @@ function App() {
           setBorderColor(progress > 0 ? 'border-[#FFFFFF33]' : 'border-[#0000002a]');
         } 
     })
-    
+
   }, []);
+
 
   return (
     <>
