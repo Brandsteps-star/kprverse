@@ -63,7 +63,7 @@ export default function PerspectiveCardGallery() {
               key={`left-${num}`}
               src={`https://kprverse.com/images/compressed/webp/collection/card-left-0${num}.webp`}
               alt={`Card ${num}`}
-              className="absolute w-[250px] h-[282px] transition-transform duration-300"
+              className="absolute w-[250px] h-[282px] max-sm:w-48 max-sm:h-56 transition-transform duration-300"
               style={{
                 right: "-10rem",
                 transform: getLeftTransform(index),
@@ -82,7 +82,7 @@ export default function PerspectiveCardGallery() {
               key={`right-${num}`}
               src={`https://kprverse.com/images/compressed/webp/collection/card-right-0${num}.webp`}
               alt={`Card ${num}`}
-              className="absolute w-[250px] h-[282px] transition-transform duration-300"
+              className="absolute w-[250px] h-[282px] max-sm:w-48 max-sm:h-56 transition-transform duration-300"
               style={{
                 left: "-10rem",
                 transform: getRightTransform(index),

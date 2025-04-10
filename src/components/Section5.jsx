@@ -31,7 +31,7 @@ export const Section5 = () => {
             <div className="absolute w-[1px] bg-[#ffffff2a] h-[86vh] left-[53%] bottom-0 mb-6 max-sm:hidden"></div>
             <PerspectiveCardGallery />
             <div className="relative flex flex-col max-md:w-full w-[50%] ml-[15px] max-sm:m-0 sm:hidden">
-                <div className="h-[25vh] max-sm:h-[14vh] flex items-center justify-start p-4 max-md:p-2 text-white border-y  border-[#ffffff2a]">
+                <div className="h-[25vh] max-sm:h-fit max-sm:py-4 flex items-center justify-start p-4 max-md:p-2 text-white border-y  border-[#ffffff2a]">
                     <div className="relative">
                     <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">Initial Collection</span>
                     <h6 className="block w-3/4 pl-40 max-sm:w-full text-[13px] leading-[16px] section-title">
