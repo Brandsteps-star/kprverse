@@ -2,7 +2,7 @@ import PerspectiveCardGallery from "./CardGallery"
 
 export const Section5 = () => {
     return(
-        <div className="relative z-50 section5 w-[98vw] min-h-screen max-sm:w-full max-md:pl-0 pl-[68px] pt-[70px] overflow-x-hidden font-whyte-inktrap flex flex-col gap-18">
+        <div className="relative z-50 section5 w-[98vw] min-h-screen max-sm:w-full max-md:pl-0 pl-[68px] pt-[70px] overflow-x-hidden font-whyte-inktrap flex flex-col gap-18 max-sm:gap-0">
             <div className="flex items-center w-full">
                 <div className="relative flex flex-col max-md:w-full w-[50%] ml-[15px] max-sm:m-0">
                 <div className="h-[25vh] max-sm:h-[10vh] flex items-center justify-start p-4 max-md:p-2 text-white border-b  border-[#ffffff2a]">
