@@ -91,7 +91,7 @@ export const Section3 = forwardRef(() => {
         <div className="relative h-[60vh] max-sm:h-[20vh] flex max-md:w-full w-full text-white  border-b border-[#FFFFFF33]">
           <div className="px-6 py-8 w-[70%] max-sm:w-[50%] max-md:p-2 border-r border-[#FFFFFF33]"></div>
 
-          <div className="p-8 w-[30%] max-sm:w-[50%] z-30">
+          <div className="p-8 max-sm:p-4 overflow-hidden w-[30%] max-sm:w-[50%] z-30">
             <div className="w-full flex items-center justify-between">
               <div>
               {["N 35°27.37","E 139°38.57"].map((line, index) => (
@@ -109,7 +109,7 @@ export const Section3 = forwardRef(() => {
           </div>
         </div>
         {/* Row 3 */}
-        <div className="relative h-[50vh] max-sm:h-[15vh] flex max-sm:items-center max-md:w-full w-full text-white  border-b border-[#FFFFFF33]">
+        <div className="relative h-[50vh] max-sm:h-[15vh] flex max-sm:items-center max-sm:justify-center max-md:w-full w-full text-white  border-b border-[#FFFFFF33]">
           <div className="px-6 py-8 w-[30%] max-md:p-2 border-r border-[#FFFFFF33] relative max-sm:hidden">
             <div className="absolute top-[-67px] left-50 rotate-[45deg] h-[142%] w-[1px] bg-[#ffffff33]"></div>
           </div>
