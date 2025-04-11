@@ -1,5 +1,4 @@
 import { forwardRef, useEffect, useRef } from "react";
-import ImageTilt from "../effects/ImageTilt";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -70,7 +69,7 @@ export const Section3 = forwardRef(() => {
           <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-none">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">002</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] uppercase">
                 You are a Keeper: an agent
               </h3>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
@@ -118,7 +117,7 @@ export const Section3 = forwardRef(() => {
           <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-r-0">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">003</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] uppercase">
               What will you do with this
               </h3>
               <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
