@@ -37,6 +37,22 @@ export const AboutSection = () => {
     return () => ctx.revert()
   }, [])
 
+  useEffect(() => {
+    if(window.innerWidth < 768){
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 0%",
+        scrub: true,
+        markers: true,
+      },
+    }).to(".left-side", {
+      opacity: 0,
+      ease: "power3.inOut",
+    });
+  }
+  }, [])
+
   return (
     <section
       ref={sectionRef}
@@ -59,7 +75,7 @@ export const AboutSection = () => {
           </div>
 
           {/* Left Side Bottom */}
-          <div className="p-8 flex flex-col justify-between max-sm:justify-end gap-4 h-full">
+          <div className="p-8 flex flex-col justify-between max-sm:justify-end gap-4 h-full left-side">
             <div className="w-1/4 max-sm:w-2/4 image-tilt">
               <ImageTilt
                 src="./images/trailer-side-media.webp"
