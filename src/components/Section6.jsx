@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 export const Section6 = () => {
     useEffect(() => {
-        const totalHeight = window.innerHeight * 4;
+        const totalHeight = window.innerHeight * 3;
         const section = ".section6";
 
         const tl = gsap.timeline({
