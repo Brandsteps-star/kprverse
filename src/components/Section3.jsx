@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Section3 = forwardRef(() => {
 
   useEffect(() => {
-    const tl = gsap.timeline({
+    const scaleUpAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: ".section3",
         start: "top 30%",
@@ -17,27 +17,34 @@ export const Section3 = forwardRef(() => {
         scrub: true,
       },
     });
-
-    tl.fromTo(
+  
+    scaleUpAnimation.fromTo(
       ".s3image",
-      { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
-      { scale: 1.1, y: 0, ease: "power3.inOut" }
+      { 
+        scale: 0, 
+        y: window.innerWidth < 768 ? -200 : 0, 
+        transformOrigin: "center" 
+      },
+      { 
+        scale: 1.1, 
+        y: 0, 
+        ease: "power3.inOut" 
+      }
     );
-
-    gsap.to(".s3image", 
-      {
-      scale: 0,
-      ease: "power3.inOut",
+  
+    gsap.timeline({
       scrollTrigger: {
         trigger: ".section4",
         start: "top 20%",
         end: "center center",
         scrub: true,
       },
-    })
-
-
-  }, [])
+    }).to(".s3image", {
+      scale: 0,
+      ease: "power3.inOut",
+    });
+  
+  }, []);
 
   const terminalText = [
     "//INITIALIZING",
