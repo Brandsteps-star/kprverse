@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {useEffect, useRef} from "react";
+import { Section6 } from "./components/Section6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,7 @@ export const App2 = () => {
         <div ref={page3Ref} className="w-full h-screen flex items-center justify-center bg-purple-500">
             <div className="w-[300px] h-[300px] bg-white" id="box3"></div>
         </div>  
+        <Section6 />
         </>
     )
 }

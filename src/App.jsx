@@ -10,6 +10,7 @@ import { AboutSection } from "./components/AboutSection";
 import {Section3} from "./components/Section3";
 import { Section4 } from "./components/Section4";
 import { Section5 } from "./components/Section5";
+import { Section6 } from "./components/Section6";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -172,9 +173,8 @@ function App() {
 
   return (
     <>
-    <LenisSmoothScroll />
-    <main className="relative w-full min-h-screen overflow-x-hidden">
-      <div className="relative w-full min-h-screen z-40">
+    {/* <LenisSmoothScroll /> */}
+    <main className="relative w-full">
         <div
           ref={backgroundContainerRef}
           className="fixed inset-0 w-full h-full z-0 overflow-hidden"
@@ -192,7 +192,7 @@ function App() {
         <Section3 />
         <Section4 />
         <Section5 />
-      </div>
+        <Section6 />
 
       <div className={`fixed z-50 pointer-events-none max-md:!border-none border ${borderColor} max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>
         <Navbar 
