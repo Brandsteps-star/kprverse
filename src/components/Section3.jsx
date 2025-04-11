@@ -69,13 +69,13 @@ export const Section3 = forwardRef(() => {
           <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-none">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">002</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] uppercase">
                 You are a Keeper: an agent
               </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
               of power and change in this
               </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
               world.
               </h3>
             </div>
@@ -117,16 +117,16 @@ export const Section3 = forwardRef(() => {
           <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-r-0">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">003</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] uppercase">
               What will you do with this
               </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
               power? Will you choose to
               </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
               protect or destroy? To give
               </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
+              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] uppercase">
               or to take?
               </h3>
             </div>
