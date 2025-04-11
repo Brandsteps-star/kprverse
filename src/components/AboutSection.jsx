@@ -44,7 +44,6 @@ export const AboutSection = () => {
         trigger: sectionRef.current,
         start: "top 0%",
         scrub: true,
-        markers: true,
       },
     }).to(".left-side", {
       opacity: 0,
