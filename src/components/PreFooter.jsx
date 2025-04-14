@@ -52,7 +52,7 @@ export const PreFooter = () => {
                                         text={"MORE DETAILS"}
                                         className="inline-block w-full whitespace-pre-line break-words font-mono text-[9px] uppercase"
                                 />
-                        <ul className="flex flex-col z-70 font-mono">
+                        <ul className="flex flex-col z-70 font-mono h-full">
                             <span className="text-[10px] text-[#ffffff6a]">CONTACT US AT</span>
                             <li>
                                 <a href="#" className="small-text nav-item relative ">

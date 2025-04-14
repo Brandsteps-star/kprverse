@@ -12,7 +12,7 @@ export const Section7 = () => {
                     <div className="hidden max-sm:block border-b border-[#0000002a] py-8">
                         <ImageTilt 
                                 src="/images/section4-image.png"
-                                className="scale-[.8] !object-contain"
+                                className="scale-[.9] !object-contain"
                                 tiltOptions={{
                                 max: 40,
                                 scale: 1.04,
