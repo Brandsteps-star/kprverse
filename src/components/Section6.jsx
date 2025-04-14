@@ -5,8 +5,7 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 export const Section6 = () => {
     useEffect(() => {
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        const totalHeight = isMobile ? window.innerHeight * 4 : window.innerHeight * 3;
+        const totalHeight = window.innerHeight * 3;
         const section = ".section6";
 
         const tl = gsap.timeline({
@@ -20,33 +19,19 @@ export const Section6 = () => {
             }
         });
 
-        // Set initial mobile states
-        if(isMobile) {
-            gsap.set([".img-1", ".img-2", ".img-3"], {
-                width: "80vw",
-                height: "80vw",
-                x: "-50%",
-                left: "50%"
-            });
-        }
+        tl.to(".text1", {
+            opacity: 1,
+            ease: "none"
+        }, -.4)
 
-        // Animation tweens
         tl.to(".img-1", {
-            scale: isMobile ? 2 : 1.25,
-            width: isMobile ? "100%" : "100%",
-            height: isMobile ? "100%" : "100%",
-            left: isMobile ? "0%" : "0%",
-            x: isMobile ? 0 : 0,
+            scale: 1.25,
             ease: "none"
         }, 0);
 
         tl.to(".img-2", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            scale: isMobile ? 2 : 1.25,
-            width: "100%",
-            height: "100%",
-            left: "0%",
-            x: 0,
+            scale: 1.25,
             ease: "none",
             onUpdate: function() {
                 const progress = this.progress();
@@ -60,9 +45,10 @@ export const Section6 = () => {
                 });
             }
         }, 0);
-
-        tl.to(".my-text", { display: "flex" });
-
+        tl.to(".text2", {
+            opacity: 1,
+            ease: "none"
+        }, 0)
         tl.to(".img-3", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             ease: "none",
@@ -77,49 +63,43 @@ export const Section6 = () => {
                     )`
                 });
             }
-        }); 
+        }, ); 
 
+        tl.to(".text3", {
+            opacity: 1,
+            ease: "none"
+        }, )
     }, []);
 
+
     return(
-        <section className="section6 w-full min-h-screen z-50 relative font-whyte-inktrap text-white">
-            {/* Image 1 Container */}
-            <div className="absolute top-1/2 md:top-0 left-1/2 md:left-0 -translate-y-1/2 md:translate-y-0 
-                -translate-x-1/2 md:translate-x-0 w-full h-full overflow-hidden z-50">
-                <img src="/images/section3-image.png" 
-                    className="w-full h-full object-cover img-1 max-md:absolute max-md:top-1/2 max-md:left-1/2" 
-                    alt="" 
-                />
-                <h1 className="z-80 md:text-4xl text-2xl text-center md:text-left md:absolute md:top-4 md:left-4">
-                    Welcome to the experience
-                </h1>
+        <section className="section6 w-full min-h-screen z-50 relative perspective-[1000px] font-whyte-inktrap text-white">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-50">
+                <img src="/images/section3-image.png" className="w-full h-full object-cover img-1" alt="" />
             </div>
-
-            {/* Image 2 Container */}
-            <div className="absolute top-1/2 md:top-0 left-1/2 md:left-0 -translate-y-1/2 md:translate-y-0 
-                -translate-x-1/2 md:translate-x-0 w-full h-full overflow-hidden z-[60]">
-                <img src="/images/section3-bg.jpg" 
-                    className="w-full h-full object-cover img-2 max-md:absolute max-md:top-1/2 max-md:left-1/2" 
-                    alt="" 
-                />
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[60]">
+                <img src="/images/section3-bg.jpg" className="w-full h-full object-cover img-2" alt="" />
             </div>
-
-            {/* Image 3 Container */}
-            <div className="absolute top-1/2 md:top-0 left-1/2 md:left-0 -translate-y-1/2 md:translate-y-0 
-                -translate-x-1/2 md:translate-x-0 w-full h-full overflow-hidden z-[70]">
-                <img src="/images/section3-image.png" 
-                    className="w-full h-full object-cover img-3 max-md:absolute max-md:top-1/2 max-md:left-1/2" 
-                    alt="" 
-                />
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[70]">
+                <img src="/images/section3-image.png" className="w-full h-full object-cover img-3" alt="" />
             </div>
-
-            {/* Text Overlay */}
-            <div className="absolute w-full md:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                hidden my-text z-[62] px-4 md:px-0">
-                <h3 className="section-title uppercase text-[24px] leading-[26px] md:text-[44px] md:leading-[44px] 
-                    font-black md:pl-20 tracking-[-1px] md:tracking-[-2px] text-center md:text-left">
-                    Ukasha is here
-                </h3>
+            <div className="absolute w-1/2 bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text1 z-[52] flex-col items-center gap-2">
+            <span className="font-mono extra-sm-text mt-4 max-md:mt-0">001 . THE KEEP</span>
+            <span className="font-normal text-center text-[17px] w-1/2 leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
+                    KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story, an uncharted world waiting to be explored.
+            </span>
+            </div>
+            <div className="absolute w-1/2 bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text2 z-[62] flex-col items-center gap-2">
+            <span className="font-mono extra-sm-text mt-4 max-md:mt-0">002 . FACTIONS</span>
+            <span className="font-normal text-center text-[17px] w-1/2 leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
+                    KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story
+            </span>
+            </div>
+            <div className="absolute w-1/2 bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text3 z-[72] flex-col items-center gap-2">
+            <span className="font-mono extra-sm-text mt-4 max-md:mt-0">003 . THE WORLD</span>
+            <span className="font-normal text-center text-[17px] w-1/2 leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
+                    KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story, an uncharted world waiting to be explored.
+            </span>
             </div>
         </section>
     )
