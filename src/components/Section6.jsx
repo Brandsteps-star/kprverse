@@ -83,21 +83,21 @@ export const Section6 = () => {
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[70]">
                 <img src="/images/section3-image.png" className="w-full h-full object-cover img-3" alt="" />
             </div>
-            <div className="absolute w-1/2 bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text1 z-[52] flex-col items-center gap-2">
+            <div className="absolute w-1/2 max-sm:w-[80%] bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text1 z-[52] flex-col items-center gap-2">
             <span className="font-mono extra-sm-text mt-4 max-md:mt-0">001 . THE KEEP</span>
-            <span className="font-normal text-center text-[17px] w-1/2 max-sm:w-full leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
+            <span className="font-normal text-center text-[17px] w-1/2 max-sm:w-full leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[17px] max-sm:leading-6 max-md:h-full">
                     KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story, an uncharted world waiting to be explored.
             </span>
             </div>
-            <div className="absolute w-1/2 bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text2 z-[62] flex-col items-center gap-2">
+            <div className="absolute w-1/2 max-sm:w-[80%] bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text2 z-[62] flex-col items-center gap-2">
             <span className="font-mono extra-sm-text mt-4 max-md:mt-0">002 . FACTIONS</span>
-            <span className="font-normal text-center text-[17px] w-1/2 max-sm:w-full leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
+            <span className="font-normal text-center text-[17px] w-1/2 max-sm:w-full leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[17px] max-sm:leading-6 max-md:h-full">
                     KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story
             </span>
             </div>
-            <div className="absolute w-1/2 bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text3 z-[72] flex-col items-center gap-2">
+            <div className="absolute w-1/2 max-sm:w-[80%] bottom-[6%] left-1/2 translate-x-[-50%] opacity-0 flex text3 z-[72] flex-col items-center gap-2">
             <span className="font-mono extra-sm-text mt-4 max-md:mt-0">003 . THE WORLD</span>
-            <span className="font-normal text-center text-[17px] w-1/2 max-sm:w-full leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[11px] max-md:h-full">
+            <span className="font-normal text-center text-[17px] w-1/2 max-sm:w-full leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[17px] max-sm:leading-6 max-md:h-full">
                     KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story, an uncharted world waiting to be explored.
             </span>
             </div>
