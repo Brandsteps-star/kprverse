@@ -11,6 +11,9 @@ import {Section3} from "./components/Section3";
 import { Section4 } from "./components/Section4";
 import { Section5 } from "./components/Section5";
 import { Section6 } from "./components/Section6";
+import { Section7 } from "./components/Section7";
+import { PreFooter } from "./components/PreFooter";
+import { Footer } from "./components/Footer";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -193,6 +196,9 @@ function App() {
         <Section4 />
         <Section5 />
         <Section6 />
+        <Section7 />
+        <PreFooter />
+        <Footer />
 
       <div className={`fixed z-50 pointer-events-none max-md:!border-none border ${borderColor} max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>
         <Navbar 

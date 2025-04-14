@@ -344,6 +344,7 @@
         border-radius: 4px;
       }
       
+      
       .sidebar-item:hover::before {
         transform: translateX(0);
       }
@@ -415,6 +416,9 @@
       }
       .img-3{
         clip-path: polygon(50% 25%, 50% 25%, 50% 75%, 50% 75%);
+      }
+      .footer-btn{
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 0);
       }
 }
 

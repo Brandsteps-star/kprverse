@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-const ShuffleText = ({ text }) => {
+const ShuffleText = ({ text, className, speed = 40 }) => {
   const [displayText, setDisplayText] = useState(text);
   const intervalRef = useRef(null);
 
@@ -33,11 +33,11 @@ const ShuffleText = ({ text }) => {
         clearInterval(intervalRef.current);
         setDisplayText(text);
       }
-    }, 40); // Interval speed in ms
+    }, speed); // Interval speed in ms
   };
 
   return (
-    <span onMouseEnter={handleMouseEnter}>
+    <span onMouseEnter={handleMouseEnter} className={className}>
       {displayText}
     </span>
   );
