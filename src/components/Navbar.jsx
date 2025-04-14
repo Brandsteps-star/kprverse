@@ -174,12 +174,12 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
     return (
         <nav 
             ref={navRef}
-            className={`relative text-white font-mono flex items-center justify-between border-b-[1px] ${borderColor} p-0 m-0 h-[50px] z-50 ${className} overflow-hidden`}
+            className={`relative text-white font-mono flex-between border-b-[1px] ${borderColor} p-0 m-0 h-[50px] z-50 ${className} overflow-hidden`}
         >
             <div className='absolute w-full ml-[67px] h-full left-0 top-0 z-60'>
                 <div className={`h-full ${progressColor} transition-all duration-300 border-r ${progressBorderColor}`} style={{ width: progressWidth }}></div>
             </div>
-            <button className={`h-full border-r-[1px] ${borderColor} p-[20px] flex items-center justify-center z-70`}>
+            <button className={`h-full border-r-[1px] ${borderColor} p-[20px] flex-center z-70`}>
                 <svg 
                     onClick={() => setIsSidebarOpen(true)} 
                     fill="none" 
@@ -189,32 +189,21 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
                     <path d="M.867.711h25.634M.867 5.25h21.429"></path>
                 </svg>
             </button>
-            <h2 className='font-whyte-inktrap hidden max-md:block text-3xl font-bold z-70'>KPR</h2>
-            <ul className="flex items-center gap-6 max-sm:hidden z-70">
-                <li>
-                    <a href="#" className="small-text nav-item px-2 relative">
-                        <span><ShuffleText text="PROJECT" /></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="small-text nav-item px-2 relative">
-                        <span><ShuffleText text="THE KEEP" /></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="small-text nav-item px-2 relative">
-                        <span><ShuffleText text="FACTIONS" /></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="small-text nav-item px-2 relative">
-                        <span><ShuffleText text="THE WORLD" /></span>
-                    </a>
-                </li>
+            <h2 className='font-whyte-inktrap hidden text-3xl font-bold z-70 max-sm:block '>KPR</h2>
+            <ul className="flex items-center gap-6 z-70 max-sm:hidden">
+                {
+                    ["PROJECT", "THE KEEP", "FACTIONS", "THE WORLD"].map((item, index) => (
+                        <li key={index}>
+                            <a href="#" className="small-text nav-item px-2 relative">
+                                <span><ShuffleText text={item} /></span>
+                            </a>
+                        </li>
+                    ))
+                }
             </ul>
             <a 
                 href="" 
-                className="login-btn max-md:!rounded-none bg-white text-black text-sm font-semibold uppercase p-4 w-28 flex items-center justify-center z-70"
+                className="login-btn flex-center bg-white text-black text-sm font-semibold uppercase p-4 w-28 z-70 max-sm:!rounded-none"
             >
                 Sign In
             </a>

@@ -7,16 +7,16 @@ export const HeroSection = () => {
                 </span>
                 <div className="relative gap-0 w-full flex flex-col items-end max-sm:items-start justify-end mt-auto">
                     <div className="flex items-start">
-                        <span className="font-mono extra-sm-text mt-4 max-md:mt-0">01K</span>
-                        <h1 className="text-[12vw] leading-[10vw] font-black font-whyte-inktrap tracking-[-13px] max-md:tracking-normal max-md:text-[13vw]">KEEP.</h1>
+                        <span className="number max-md:mt-0">01K</span>
+                        <h1 className="hero-heading max-md:tracking-normal max-md:text-[13vw]">KEEP.</h1>
                     </div>
                     <div className="flex self-end">
-                        <span className="font-mono extra-sm-text mt-4 max-md:mt-0">02K</span>
-                        <h1 className="text-[12vw] leading-[10vw] font-black font-whyte-inktrap tracking-[-13px] max-md:tracking-normal max-md:text-[13vw]">PROTECT.</h1>
+                        <span className="number max-md:mt-0">02K</span>
+                        <h1 className="hero-heading max-md:tracking-normal max-md:text-[13vw]">PROTECT.</h1>
                     </div>
                     <div className="flex items-start pl-4">
-                        <span className="font-mono extra-sm-text mt-4 max-md:mt-0">03K</span>
-                        <h1 className="text-[12vw] leading-[10vw] font-black font-whyte-inktrap tracking-[-13px] max-md:tracking-normal max-md:text-[13vw]">REIMAGINE.</h1>
+                        <span className="number max-md:mt-0">03K</span>
+                        <h1 className="hero-heading max-md:tracking-normal max-md:text-[13vw]">REIMAGINE.</h1>
                     </div>
                 </div>
             </div>

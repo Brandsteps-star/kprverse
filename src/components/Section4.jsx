@@ -61,24 +61,22 @@ export const Section4 = () => {
     })
   }, []);
 
-  // Animation for the background boxes
   useEffect(() => {
-    // Create a timeline for sequenced animations
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section5",
-        start: "top 60%", // Adjust when animation starts
-        end: "center 40%", // Adjust when animation ends
-        scrub: 1, // Smooth scrubbing effect
+        start: "top 60%",
+        end: "center 40%",
+        scrub: 1, 
       },
     });
 
     const tlForImg = gsap.timeline({
       scrollTrigger: {
         trigger: ".section5",
-        start: "top 100%", // Adjust when animation starts
-        end: "top 0%", // Adjust when animation ends
-        scrub: 1, // Smooth scrubbing effect
+        start: "top 100%", 
+        end: "top 0%", 
+        scrub: 1, 
       }
     })
 
@@ -88,49 +86,47 @@ export const Section4 = () => {
 
     })
 
-    // First background box animation
     tl.fromTo(
       ".bg-block1",
       { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
       { scale: 1.1, y: 0, duration: 1, ease: "power3.inOut" }
     );
 
-    // Second background box animation (starts after first is 50% complete)
     tl.fromTo(
       ".bg-block2",
       { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
       { scale: 1.2, y: 0, duration: 1, ease: "power3.inOut" },
-      "-=0.5" // Overlap with previous animation
+      "-=0.5"
     );
     tl.fromTo(
       ".bg-block3",
       { scale: 0, y: window.innerWidth < 768 ? -200 : 0, transformOrigin: "center" },
       { scale: 1.3, y: 0, duration: 1, ease: "power3.inOut" },
-      "-=0.10" // Overlap with previous animation
+      "-=0.10" 
     );
   }, []);
 
   return (
-    <section className="section4 mt-[200px] w-full max-sm:min-h-screen relative z-20 flex justify-center font-whyte-inktrap overflow-hidden">
+    <section className="section4 mt-[200px] w-full relative z-20 flex justify-center font-whyte-inktrap overflow-hidden max-sm:min-h-screen ">
       {/* Background layers - positioned in stacking order */}
-      <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-10">
+      <div className="fixed top-0 left-0 w-full h-screen flex-center pointer-events-none z-10">
         <div className="absolute w-[1300px] h-[1300px] bg-purple-400 bg-block1 scale-0 rounded-xl"></div>
       </div>
-      <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-20">
+      <div className="fixed top-0 left-0 w-full h-screen flex-center pointer-events-none z-20">
         <div className="absolute  w-[1300px] h-[1300px] bg-purple-600 bg-block2 scale-0 rounded-xl"></div>
       </div>
-      <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-20">
+      <div className="fixed top-0 left-0 w-full h-screen flex-center pointer-events-none z-20">
         <div className="absolute  w-[1300px] h-[1300px] bg-purple-500 bg-block3 scale-0 rounded-xl"></div>
       </div>
 
       {/* Content */}
-      <div className="w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col max-sm:flex-col-reverse">
-        <div className="flex items-center justify-center w-[20vw] h-full max-sm:w-full max-sm:mt-8">
-          <div className="rotate-270 max-sm:rotate-0 h-[20vw] max-sm:h-full flex flex-col text">
+      <div className="w-[97vw] pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col max-sm:flex-col-reverse max-md:w-full max-md:pl-0">
+        <div className="flex-center w-[20vw] h-full max-sm:w-full max-sm:mt-8">
+          <div className="rotate-270 h-[20vw] flex flex-col text max-sm:rotate-0 max-sm:h-full">
             <h1 className="text-[20vw] leading-[20vw] font-black max-sm:text-[42vw] max-sm:leading-[42vw]">
               10K
             </h1>
-            <span className="mt-[-20px] max-sm:mt-[-25px] font-mono small-text flex items-center gap-2">
+            <span className="mt-[-20px] small-text flex items-center gap-2 max-sm:mt-[-25px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
@@ -151,8 +147,8 @@ export const Section4 = () => {
             </span>
           </div>
         </div>
-        <div className="w-[50vw] max-sm:w-full h-full relative">
-          <div className="fixed w-full h-full max-sm:top-[-190px] top-0 left-0 hidden opacity-0 scale-0 fixed-image px-4 z-50">
+        <div className="w-[50vw] h-full relative max-sm:w-full">
+          <div className="fixed-image fixed w-full h-full top-0 left-0 hidden opacity-0 scale-0 px-4 z-50 max-sm:top-[-190px]">
             <ImageTilt
               src="/images/section4-image.png"
               className="scale-[.7] !object-contain max-sm:scale-[1]"
@@ -164,10 +160,10 @@ export const Section4 = () => {
               }}
             />
           </div>
-          <div className="absolute w-[1px] bg-[#0000002a] h-[87vh] bottom-0 right-0 mb-6 max-sm:hidden border-animation"></div>
+          <div className="border-animation absolute w-[1px] bg-[#0000002a] h-[87vh] bottom-0 right-0 mb-6 max-sm:hidden"></div>
         </div>
         <div className="w-[30vw] h-full flex flex-col justify-center max-sm:hidden">
-          <div className="h-[50%] p-6 relative border-b border-[#0000002a] border-animation">
+          <div className="border-animation h-[50%] p-6 relative border-b border-[#0000002a]">
             <ImageTilt
               src="/images/face-traits.webp"
               className="image"

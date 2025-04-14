@@ -42,10 +42,10 @@ export const Section5 = () => {
     }, [])
 
     return(
-        <div className="relative z-50 section5 w-[98vw] min-h-screen max-sm:w-full max-md:pl-0 pl-[68px] pt-[70px] overflow-x-hidden font-whyte-inktrap flex flex-col gap-18 max-sm:gap-0">
+        <div className="section5 relative z-50 w-[98vw] min-h-screen pl-[68px] pt-[70px] overflow-x-hidden font-whyte-inktrap flex flex-col gap-18 max-sm:gap-0  max-sm:w-full max-md:pl-0">
             <div className="flex items-center w-full">
-                <div className="relative flex flex-col max-md:w-full w-[50%] ml-[15px] max-sm:m-0">
-                <div className="h-[25vh] max-sm:h-[10vh] flex items-center justify-start p-4 max-md:p-2 text-white border-b border-animation  border-[#ffffff2a]">
+                <div className="relative flex flex-col w-[50%] ml-[15px] max-sm:m-0 max-md:w-full">
+                <div className="border-animatio h-[25vh] flex-start p-4 max-md:p-2 text-white border-bn  border-[#ffffff2a] max-sm:h-[10vh]">
                     <div className="relative">
                     <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2 text">004</span>
                     <h3 className="section-title uppercase text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px] text">

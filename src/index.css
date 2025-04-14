@@ -379,6 +379,7 @@
         font-size: 11px;
         font-weight: 400;
         text-transform: uppercase;
+        font-family: 'IBM Plex Mono';
       }
       
       .extra-sm-text{
@@ -386,6 +387,7 @@
         line-height: 9px;
         font-weight: 400;
         text-transform: uppercase;
+        font-family: 'IBM Plex Mono';
       }
       .invert{
         filter: invert(1);
@@ -419,6 +421,58 @@
       }
       .footer-btn{
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 0);
+      }
+      .number{
+        font-family: "IBM Plex Mono";
+        font-size: 9px;
+        line-height: 9px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+      .hero-heading{
+        font-size: 12vw;
+        line-height: 10vw;
+        font-weight: 900;
+        font-family: 'Whyte Inktrap';
+        letter-spacing: -13px;
+      }
+      .flex-center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .flex-between{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .flex-start{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .title {
+        font-size: 44px;
+        line-height: 44px;
+        font-weight: 900;
+        letter-spacing: -2px;
+      }
+      
+      @media (max-width: 768px) {
+        .title {
+          font-size: 30px;
+        }
+      }
+      
+      @media (max-width: 640px) {
+        .title {
+          font-size: 23px;
+          line-height: 26px;
+          letter-spacing: 0;
+        }
       }
 }
 

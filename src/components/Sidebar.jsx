@@ -8,90 +8,68 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
         
         // isSidebarOpen && 
         // ( 
-            <main className={`${className} w-full h-full ${isSidebarOpen ? 'left-0' : 'left-[-100%]'} fixed top-0 z-70 max-sm:p-0 transition-all duration-500 ease-in-out`}>
-                <section className="flex bg-black max-w-fit w-full h-full rounded-lg max-sm:rounded-none max-sm:max-w-full text-white ">
+            <main className={`${className} ${isSidebarOpen ? 'left-0' : 'left-[-100%]'} w-full h-full fixed top-0 z-70 transition-all duration-500 ease-in-out max-sm:p-0`}>
+                <section className="flex bg-black max-w-fit w-full h-full rounded-lg text-white max-sm:rounded-none max-sm:max-w-full">
 
                     {/* Left side */}
                     <div className="pt-8 flex flex-col h-full justify-between w-[500px] max-sm:w-full">
 
                         {/* Left Top */}
-                        <div className="flex max-sm:flex-col items-start gap-16 px-6">
-                            <span className="extra-sm-text font-mono">
+                        <div className="flex items-start gap-16 px-6 max-sm:flex-col">
+                            <span className="extra-sm-text">
                                 <ShuffleText text="Discover" />
                             </span>
                             <ul className="font-whyte-inktrap flex flex-col gap-1">
-                                <li>
-                                    <a href="" className="sidebar-item active">
-                                        <span className="font-black"><ShuffleText text="STORY" /></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" className="sidebar-item">
-                                        <span className="font-black"><ShuffleText text="PROTOCOL" /></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" className="sidebar-item">
-                                        <span className="font-black"><ShuffleText text="JOURNAL" /></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" className="sidebar-item">
-                                        <span className="font-black"><ShuffleText text="MEDIA" /></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" className="sidebar-item">
-                                        <span className="font-black"><ShuffleText text="GALLERY" /></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" className="sidebar-item">
-                                        <span className="font-black"><ShuffleText text="ABOUT" /></span>
-                                    </a>
-                                </li>
+                                {
+                                    ["STORY", "PROTOCOL", "JOURNAL", "MEDIA", "GALLERY", "ABOUT"].map((item, index) => (
+                                        <li key={index}>
+                                            <a href="" className="sidebar-item active">
+                                                <span className="font-black"><ShuffleText text={item} /></span>
+                                            </a>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                         </div>
                         
                         {/* Left Bottom */}
                         <div className="w-full mt-4">
                             <div className="flex items-start gap-20 border-t-[1px] border-[#FFFFFF33] p-4">
-                                <span className="extra-sm-text font-mono">
+                                <span className="extra-sm-text">
                                     <ShuffleText text="Connect" />
                                 </span>
                                 <div className="flex flex-col mt-[-7px]">
-                                    <a href="">
-                                        <span className="small-text font-mono">
-                                            <ShuffleText text="TWITTER" />
-                                        </span>
-                                    </a>
-                                    <a href="">
-                                        <span className="small-text font-mono">
-                                            <ShuffleText text="DISCORD" />
-                                        </span>
-                                    </a>
+                                    {
+                                        ["TWITTER", "DISCORD"].map((item, index) => (
+                                            <a href="" key={index}>
+                                                <span className="small-text">
+                                                    <ShuffleText text={item} />
+                                                </span>
+                                            </a>
+                                        ))
+                                    }
                                 </div>
                             </div>
                             <div className="flex items-center gap-20 border-t-[1px] border-[#FFFFFF33] p-4">
-                                <span className="extra-sm-text font-mono">
+                                <span className="extra-sm-text">
                                     <ShuffleText text="BUY ON" />
                                 </span>
                                 <div className="flex flex-col">
                                     <a href="/" className="flex items-center gap-1">
                                         <img src={opensea} alt="opeasea" width="16" />
-                                        <span className="extra-sm-text font-mono">
+                                        <span className="extra-sm-text">
                                             <ShuffleText text="OPENSEA" />
                                         </span>
                                     </a>
                                 </div>
                             </div>
                             <div className="flex items-center gap-20 border-t-[1px] border-[#FFFFFF33] p-4">
-                                <span className="extra-sm-text font-mono">
+                                <span className="extra-sm-text">
                                     <ShuffleText text="US-EN" />
                                 </span>
                                 <div className="flex flex-col">
                                     <a href="">
-                                        <span className="extra-sm-text font-mono">
+                                        <span className="extra-sm-text">
                                             <ShuffleText text="© 2025" />
                                         </span>
                                     </a>
@@ -102,7 +80,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                     </div>
 
                     {/* Right Side */}
-                    <div className="flex flex-col h-full w-[67px] justify-between items-center border-l-[1px]  border-[#FFFFFF33] pb-6">
+                    <div className="flex-between flex-col h-full w-[67px] border-l-[1px]  border-[#FFFFFF33] pb-6">
                         <button onClick={() => setIsSidebarOpen(false)} class="group relative cursor-pointer border-b-[1px] border-[#FFFFFF33] w-full py-4 px-6">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

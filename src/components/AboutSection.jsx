@@ -64,12 +64,19 @@ export const AboutSection = () => {
           <div className="px-6 py-8 max-md:p-2 text-black border-b border-[#0000002a]">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">001</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 tracking-[-2px]">
-                A FAMILIAR WORLD... SET
-              </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[23px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px]">
-                ON A DIFFERENT PATH
-              </h3>
+              {
+                [" A FAMILIAR WORLD... SET", "ON A DIFFERENT PATH"].map((item, index) => (
+                  index == 0 ? (
+                    <h3 key={index} className="section-title title pl-20">
+                      {item}
+                    </h3>
+                  ) : (
+                    <h3 key={index} className="section-title title mt-[-5px]">
+                      {item}
+                    </h3>
+                  )
+                ))
+              }
             </div>
           </div>
 
@@ -95,7 +102,7 @@ export const AboutSection = () => {
 
         {/* Right Side */}
         <div className="w-[37%] h-[86vh] border-l border-[#0000002a] p-4 max-md:hidden">
-          <div className="h-full w-full flex items-center justify-between p-4 image-tilt">
+          <div className="flex-center h-full w-full p-4 image-tilt">
             <ImageTilt
               src="./images/about-image.png"
               alt="About Image"

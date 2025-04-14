@@ -60,7 +60,7 @@ export const Section3 = forwardRef(() => {
     <section
       className="section3 min-h-screen w-full relative z-20 flex flex-col justify-center font-whyte-inktrap"
     >
-      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none z-10">
+      <div className="fixed top-0 left-0 w-full h-full flex-center pointer-events-none z-10">
         <img src="/images/section3-image.png" className="absolute object-cover w-[1300px] h-[1300px] scale-0 rounded-xl s3image" />
       </div>
       <div className="h-full mt-[700px] max-sm:mt-[950px] w-[98vw] max-md:w-full max-md:pl-0 pl-[82px] pt-[70px] z-30 relative max-md:flex-col">
@@ -69,15 +69,19 @@ export const Section3 = forwardRef(() => {
           <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-none">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">002</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] max-sm:tracking-[-1] uppercase">
-                You are a Keeper: an agent
-              </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] max-sm:tracking-[-1] uppercase">
-              of power and change in this
-              </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] max-sm:tracking-[-1] uppercase">
-              world.
-              </h3>
+              {
+                ["YOU ARE A KEEPER: AN AGENT", "OF POWER AND CHANGE IN THIS", "WORLD"].map((item, index) => (
+                  index == 0 ? (
+                    <h3 key={index} className="section-title title font-black pl-20 max-sm:pl-12 max-sm:!tracking-[-1] uppercase">
+                      {item}
+                    </h3>
+                  ) : (
+                    <h3 key={index} className="section-title title font-black max-sm:!tracking-[-1] uppercase">
+                      {item}
+                    </h3>
+                  )
+                ))
+              }
             </div>
           </div>
 
@@ -117,18 +121,19 @@ export const Section3 = forwardRef(() => {
           <div className="px-6 py-8 w-[70%] max-sm:w-full max-md:p-2 border-r border-[#FFFFFF33] max-sm:border-r-0">
             <div className="relative">
               <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">003</span>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black pl-20 max-sm:pl-12 tracking-[-2px] max-sm:tracking-[-1] uppercase">
-              What will you do with this
-              </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] max-sm:tracking-[-1] uppercase">
-              power? Will you choose to
-              </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] max-sm:tracking-[-1] uppercase">
-              protect or destroy? To give
-              </h3>
-              <h3 className="section-title text-[44px] leading-[44px] max-md:text-[30px] max-sm:text-[20px] max-sm:leading-[26px] max-sm:tracking-0 font-black mt-[-5px] tracking-[-2px] max-sm:tracking-[-1] uppercase">
-              or to take?
-              </h3>
+              {
+                ["What will you do with this", "power? Will you choose to", "protect or destroy? To give", "or to take?"].map((item, index) => (
+                  index == 0 ? (
+                    <h3 key={index} className="section-title title pl-20 max-sm:pl-12 max-sm:tracking-[-1] uppercase">
+                      {item}
+                    </h3>
+                  ) : (
+                    <h3 key={index} className="section-title title mt-[-5px] max-sm:tracking-[-1] uppercase">
+                      {item}
+                    </h3>
+                  )
+                ))
+              }
             </div>
           </div>
         </div>
