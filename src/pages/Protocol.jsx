@@ -10,7 +10,7 @@ export const Protocol = () => {
     return(
         <main className="relative w-full">
             <img src="/images/protocol-bg.jpg" className="fixed w-full h-screen object-cover z-10" alt="" />
-            <h1 className="h-screen z-20 relative text-white">Ukasha is here</h1>
+            <h1 className="h-screen z-20 relative text-white pt-60 pl-60 font-hexaframe text-6xl uppercase">Protocol</h1>
 
             <PreFooter />
             <Footer />

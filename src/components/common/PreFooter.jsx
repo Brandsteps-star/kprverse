@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import ShuffleText from "../../effects/ShuffleText"
 
 export const PreFooter = () => {
@@ -20,11 +21,18 @@ export const PreFooter = () => {
                         />
                         <ul className="flex flex-col z-70 font-mono">
                             {
-                                ["STORY", "JOURNAL", "MEDIA", "GALLERY", "ABOUT", "CAREER"].map((item, index) => (
+                                 [
+                                    {name: "STORY", path: "/"},
+                                    {name: "PROTOCOL", path: "/protocol"},
+                                    {name: "JOURNAL", path: "/journal"},
+                                    {name: "MEDIA", path: "/media"},
+                                    {name: "GALLERY", path: "/gallery"},
+                                    {name: "ABOUT", path: "/about"}
+                                ].map((item, index) => (
                                     <li key={index}>
-                                        <a href="#" className="small-text nav-item relative">
-                                            <span><ShuffleText text={item} /></span>
-                                        </a>
+                                        <Link to={item.path} className="small-text nav-item relative">
+                                            <span><ShuffleText text={item.name} /></span>
+                                        </Link>
                                     </li>
                                 ))
                             }
