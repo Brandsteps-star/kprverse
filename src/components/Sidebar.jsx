@@ -25,13 +25,13 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                                         index == 0 ? (
                                             <li key={index}>
                                                 <a href="" className="sidebar-item active">
-                                                    <span className="font-black"><ShuffleText text={item} /></span>
+                                                    <ShuffleText className="font-black" text={item} />
                                                 </a>
                                             </li>
                                         ) : (
                                             <li key={index}>
                                                 <a href="" className="sidebar-item">
-                                                    <span className="font-black"><ShuffleText text={item} /></span>
+                                                    <ShuffleText className="font-black" text={item} />
                                                 </a>
                                             </li>
                                         )
