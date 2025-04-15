@@ -192,10 +192,15 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
             <h2 className='font-whyte-inktrap hidden text-3xl font-bold z-70 max-sm:block '>KPR</h2>
             <ul className="flex items-center gap-6 z-70 max-sm:hidden">
                 {
-                    ["PROJECT", "THE KEEP", "FACTIONS", "THE WORLD"].map((item, index) => (
+                    [
+                        { text: "PROJECT", link: "#project" },
+                        { text: "THE KEEP", link: "#the-keep" },
+                        { text: "FACTIONS", link: "#factions" },
+                        { text: "THE WORLD", link: "#the-world" }
+                    ].map((item, index) => (
                         <li key={index}>
-                            <a href="#" className="small-text nav-item px-2 relative">
-                                <span><ShuffleText text={item} /></span>
+                            <a href={item.link} className="small-text nav-item px-2 relative">
+                                <span><ShuffleText text={item.text} /></span>
                             </a>
                         </li>
                     ))

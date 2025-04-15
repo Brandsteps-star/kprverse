@@ -7,7 +7,7 @@ export const Section7 = () => {
             >
               <div className="h-full w-[97vw] max-md:w-full pt-[70px] flex flex-col z-30 relative overflow-hidden max-md:pl-0 pl-[68px] max-md:flex-col">
                     <div className="h-[44vh] w-full border-b border-[#0000002a] p-8 flex items-end justify-center max-sm:h-full max-sm:p-4">
-                        <h1 className="text-[18.5vw] leading-[10vw] font-black font-whyte-inktrap tracking-[-13px] max-md:tracking-normal max-md:text-[16vw]">KEEPERS.</h1>
+                        <h1 className="text-[18vw] leading-[18vw] font-black tracking-[-13px] max-md:tracking-normal max-md:text-[16vw] font-hexaframe">KEEPERS</h1>
                     </div>
                     <div className="hidden max-sm:block border-b border-[#0000002a] py-8">
                         <ImageTilt 

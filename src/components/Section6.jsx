@@ -74,13 +74,13 @@ export const Section6 = () => {
 
     return(
         <section className="section6 w-full min-h-screen z-50 relative perspective-[1000px] font-whyte-inktrap text-white">
-            <div className="absolute-pos z-50">
+            <div id="the-keep" className="absolute-pos z-50">
                 <img src="/images/section3-image.png" className="img img-1" alt="" />
             </div>
-            <div className="absolute-pos z-[60]">
+            <div id="factions" className="absolute-pos z-[60]">
                 <img src="/images/section3-bg.jpg" className="img img-2" alt="" />
             </div>
-            <div className="absolute-pos z-[70]">
+            <div id="the-world" className="absolute-pos z-[70]">
                 <img src="/images/section3-image.png" className="img img-3" alt="" />
             </div>
             <div className="paragraph-container text1 z-[52]">

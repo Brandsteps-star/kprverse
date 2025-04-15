@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Hexaframe CF';
+    src: local('Hexaframe CF Bold'), local('Hexaframe-CF-Bold'),
+        url('HexaframeCF-Bold.woff2') format('woff2'),
+        url('HexaframeCF-Bold.woff') format('woff'),
+        url('HexaframeCF-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

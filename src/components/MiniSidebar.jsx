@@ -13,6 +13,28 @@ export const MiniSidebar = ({className = ""}) => {
   const [borderColor, setBorderColor] = useState('border-[#FFFFFF33]');
 
   useEffect(() => {
+
+    gsap.to(miniSidebarRef.current, {
+      autoAlpha: 0, 
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".footer",
+        start: "top 90%", 
+        end: "top 50%",  
+        scrub: true,
+        toggleActions: "play none none none"
+      }
+    });
+  
+    ScrollTrigger.create({
+      trigger: ".footer",
+      start: "top 90%",
+      end: "top 100%",
+      onEnterBack: () => {
+        gsap.to(miniSidebarRef.current, { autoAlpha: 1, duration: 0.3 });
+      },
+    });
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.about-section',
@@ -97,6 +119,7 @@ export const MiniSidebar = ({className = ""}) => {
     return () => {
       tl.kill(); // Clean up the animation
     }
+
   }, []);
 
   return (

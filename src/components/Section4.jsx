@@ -122,8 +122,8 @@ export const Section4 = () => {
       {/* Content */}
       <div className="w-[97vw] pl-[68px] pt-[70px] flex items-start z-30 relative max-md:flex-col max-sm:flex-col-reverse max-md:w-full max-md:pl-0">
         <div className="flex-center w-[20vw] h-full max-sm:w-full max-sm:mt-8">
-          <div className="rotate-270 h-[20vw] flex flex-col text max-sm:rotate-0 max-sm:h-full">
-            <h1 className="text-[20vw] leading-[20vw] font-black max-sm:text-[42vw] max-sm:leading-[42vw]">
+          <div className="rotate-270 h-[20vw] flex flex-col gap-2 text max-sm:rotate-0 max-sm:h-full max-sm:gap-8">
+            <h1 className="text-[17vw] leading-[20vw] tracking-[-15px] font-black max-sm:text-[42vw] max-sm:leading-[42vw] font-hexaframe">
               10K
             </h1>
             <span className="mt-[-20px] small-text flex items-center gap-2 max-sm:mt-[-25px]">

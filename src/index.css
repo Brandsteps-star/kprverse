@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Adding Custom Font */
+
+@font-face {
+    font-family: 'Hexaframe CF';
+    src: url('/fonts/HexaframeCF-Bold/HexaframeCF-Bold.woff2') format('woff2'),
+        url('/fonts/HexaframeCF-Bold/HexaframeCF-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap; /* Optional: controls how font loads */
+}
 @font-face {
   font-family: 'Whyte Inktrap';
   src: url('/fonts/WhyteInktrap-Bold.eot');
@@ -278,8 +286,14 @@
   font-style: normal;
 }
 
-/* Custom Font Utility */
+*{
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
+    .font-hexaframe{
+      font-family: 'Hexaframe CF';
+    }
     .font-whyte-inktrap{
       font-family: 'Whyte Inktrap';
     }
@@ -322,7 +336,6 @@
             color: black;
       }
 
-      /* Sidebar Item */
       .sidebar-item {
         position: relative;
         overflow: hidden;
@@ -538,7 +551,6 @@
       }
 }
 
-/* Fix Global Font Override */
 * {
     box-sizing: border-box;
 }
