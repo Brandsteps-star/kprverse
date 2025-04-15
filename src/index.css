@@ -487,7 +487,7 @@
         .title {
           font-size: 23px;
           line-height: 26px;
-          letter-spacing: 0;
+          letter-spacing: -2px;
         }
       }
 
