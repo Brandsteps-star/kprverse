@@ -340,6 +340,7 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
+        padding: 4px;
       }
       
       .sidebar-item::before {
@@ -374,7 +375,6 @@
       .sidebar-item span {
         position: relative;
         z-index: 1;
-        padding: 0 4px;
         line-height: 50px;
         font-size: 50px;
       }

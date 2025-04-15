@@ -19,7 +19,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                             <span className="extra-sm-text">
                                 <ShuffleText text="Discover" />
                             </span>
-                            <ul className="font-whyte-inktrap flex flex-col gap-1">
+                            <ul className="font-whyte-inktrap flex flex-col gap-2">
                                 {
                                     ["STORY", "PROTOCOL", "JOURNAL", "MEDIA", "GALLERY", "ABOUT"].map((item, index) => (
                                         index == 0 ? (
