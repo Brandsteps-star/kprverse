@@ -2,6 +2,7 @@ import MusicBarIcon from "../effects/MusicBarIcon"
 import ShuffleText from "../effects/ShuffleText"
 import opensea from '../../public/svg/opensea.svg';
 import logo from '../../public/images/logo.png'
+import { Link } from "react-router-dom";
 
 export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => {
     return(
@@ -21,18 +22,25 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                             </span>
                             <ul className="font-whyte-inktrap flex flex-col gap-2">
                                 {
-                                    ["STORY", "PROTOCOL", "JOURNAL", "MEDIA", "GALLERY", "ABOUT"].map((item, index) => (
+                                    [
+                                        {name: "STORY", path: "/"},
+                                        {name: "PROTOCOL", path: "/protocol"},
+                                        {name: "JOURNAL", path: "/journal"},
+                                        {name: "MEDIA", path: "/media"},
+                                        {name: "GALLERY", path: "/gallery"},
+                                        {name: "ABOUT", path: "/about"}
+                                    ].map((item, index) => (
                                         index == 0 ? (
                                             
-                                                <a key={index} href="" className="sidebar-item active">
-                                                    <ShuffleText className="font-black" text={item} />
-                                                </a>
+                                                <Link key={index} to={item.path} className="sidebar-item active">
+                                                    <ShuffleText className="font-black" text={item.name} />
+                                                </Link>
                                            
                                         ) : (
                                             
-                                                <a key={index} href="" className="sidebar-item">
-                                                    <ShuffleText className="font-black" text={item} />
-                                                </a>
+                                                <Link key={index} to={item.path} className="sidebar-item">
+                                                    <ShuffleText className="font-black" text={item.name} />
+                                                </Link>
                                            
                                         )
                                     ))

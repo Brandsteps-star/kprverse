@@ -5,7 +5,7 @@ import ShuffleText from "../effects/ShuffleText"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
+export const Navbar = ({ setIsSidebarOpen, className = '', navborderColor, btnColor, iconColor, menuColor }) => {
     const navRef = useRef(null);
     const [borderColor, setBorderColor] = useState('border-[#FFFFFF33]');
     const [progressWidth, setProgressWidth] = useState('0%');
@@ -174,17 +174,17 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
     return (
         <nav 
             ref={navRef}
-            className={`relative text-white font-mono flex-between border-b-[1px] ${borderColor} p-0 m-0 h-[50px] z-50 ${className} overflow-hidden`}
+            className={`relative text-white font-mono flex-between border-b-[1px] ${borderColor} ${navborderColor} p-0 m-0 h-[50px] z-50 ${className} overflow-hidden`}
         >
             <div className='absolute w-full ml-[67px] h-full left-0 top-0 z-60'>
                 <div className={`h-full ${progressColor} transition-all duration-300 border-r ${progressBorderColor}`} style={{ width: progressWidth }}></div>
             </div>
-            <button className={`h-full border-r-[1px] ${borderColor} p-[20px] flex-center z-70`}>
+            <button className={`h-full border-r-[1px] ${borderColor} ${navborderColor} p-[20px] flex-center z-70`}>
                 <svg 
                     onClick={() => setIsSidebarOpen(true)} 
                     fill="none" 
                     viewBox="0 0 27 6" 
-                    className="stroke-white stroke-1 w-[27px] cursor-pointer"
+                    className={`stroke-white ${iconColor} stroke-1 w-[27px] cursor-pointer`}
                 >
                     <path d="M.867.711h25.634M.867 5.25h21.429"></path>
                 </svg>
@@ -199,7 +199,7 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
                         { text: "THE WORLD", link: "#the-world" }
                     ].map((item, index) => (
                         <li key={index}>
-                            <a href={item.link} className="small-text nav-item px-2 relative">
+                            <a href={item.link} className={`small-text nav-item px-2 relative ${menuColor}`}>
                                 <span><ShuffleText text={item.text} /></span>
                             </a>
                         </li>
@@ -208,7 +208,7 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
             </ul>
             <a 
                 href="" 
-                className="login-btn flex-center bg-white text-black text-sm font-semibold uppercase p-4 w-28 z-70 max-sm:!rounded-none"
+                className={`login-btn flex-center ${btnColor} bg-white text-black text-sm font-semibold uppercase p-4 w-28 z-70 max-sm:!rounded-none`}
             >
                 Sign In
             </a>
