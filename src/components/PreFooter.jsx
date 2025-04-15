@@ -3,7 +3,7 @@ import ShuffleText from "../effects/ShuffleText"
 export const PreFooter = () => {
     return(
         <section className="prefooter min-h-[50vh] h-full w-full relative z-20 flex justify-center font-whyte-inktrap bg-black text-white">
-                <div className="w-full max-md:w-full flex z-30 relative max-md:flex-col overflow-hidden border-b border-[#ffffff2a] max-sm:border-0">
+                <div className="w-full flex z-30 relative overflow-hidden border-b border-[#ffffff2a] max-md:flex-col max-md:w-full max-sm:border-0">
                     <div className="w-1/4 h-full border-r border-[#ffffff2a] max-sm:border-r-0 max-sm:border-b p-8 flex items-end max-sm:w-full">
                         <ShuffleText
                             text={
@@ -52,7 +52,7 @@ export const PreFooter = () => {
                                         text={"MORE DETAILS"}
                                         className="inline-block w-full whitespace-pre-line break-words font-mono text-[9px] uppercase"
                                 />
-                        <ul className="flex flex-col z-70 font-mono h-full">
+                        <ul className="flex flex-col z-70 font-mono max-sm:h-full">
                             <span className="text-[10px] text-[#ffffff6a]">CONTACT US AT</span>
                             <li>
                                 <a href="#" className="small-text nav-item relative ">

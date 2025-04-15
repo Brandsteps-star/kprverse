@@ -22,11 +22,19 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                             <ul className="font-whyte-inktrap flex flex-col gap-1">
                                 {
                                     ["STORY", "PROTOCOL", "JOURNAL", "MEDIA", "GALLERY", "ABOUT"].map((item, index) => (
-                                        <li key={index}>
-                                            <a href="" className="sidebar-item active">
-                                                <span className="font-black"><ShuffleText text={item} /></span>
-                                            </a>
-                                        </li>
+                                        index == 0 ? (
+                                            <li key={index}>
+                                                <a href="" className="sidebar-item active">
+                                                    <span className="font-black"><ShuffleText text={item} /></span>
+                                                </a>
+                                            </li>
+                                        ) : (
+                                            <li key={index}>
+                                                <a href="" className="sidebar-item">
+                                                    <span className="font-black"><ShuffleText text={item} /></span>
+                                                </a>
+                                            </li>
+                                        )
                                     ))
                                 }
                             </ul>

@@ -8,15 +8,15 @@ export const HeroSection = () => {
                 <div className="relative gap-0 w-full flex flex-col items-end max-sm:items-start justify-end mt-auto">
                     <div className="flex items-start">
                         <span className="number max-md:mt-0">01K</span>
-                        <h1 className="hero-heading max-md:tracking-normal max-md:text-[13vw]">KEEP.</h1>
+                        <h1 className="hero-heading max-md:!tracking-normal max-md:!text-[13vw]">KEEP.</h1>
                     </div>
                     <div className="flex self-end">
                         <span className="number max-md:mt-0">02K</span>
-                        <h1 className="hero-heading max-md:tracking-normal max-md:text-[13vw]">PROTECT.</h1>
+                        <h1 className="hero-heading max-md:!tracking-normal max-md:!text-[13vw]">PROTECT.</h1>
                     </div>
                     <div className="flex items-start pl-4">
                         <span className="number max-md:mt-0">03K</span>
-                        <h1 className="hero-heading max-md:tracking-normal max-md:text-[13vw]">REIMAGINE.</h1>
+                        <h1 className="hero-heading max-md:!tracking-normal max-md:!text-[13vw]">REIMAGINE.</h1>
                     </div>
                 </div>
             </div>

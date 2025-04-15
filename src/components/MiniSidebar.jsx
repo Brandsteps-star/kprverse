@@ -102,7 +102,7 @@ export const MiniSidebar = ({className = ""}) => {
   return (
     <div 
       ref={miniSidebarRef} 
-      className={`${className} ${borderColor} w-[68px] z-60 mini-sidebar-h flex-between flex-col px-2 pt-48 pb-6 border-r max-md:hidden`}
+      className={`${className} ${borderColor} w-[68px] z-60 mini-sidebar-h flex-between flex-col px-2 pt-48 pb-6 border-r max-sm:!hidden`}
     >
       <img 
         src={logo} 

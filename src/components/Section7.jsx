@@ -5,8 +5,8 @@ export const Section7 = () => {
          <section
               className="min-h-screen w-full relative z-20 flex justify-center font-whyte-inktrap bg-white"
             >
-              <div className="h-full w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] pt-[70px] flex flex-col z-30 relative max-md:flex-col overflow-hidden">
-                    <div className="h-[44vh] max-sm:h-full w-full border-b border-[#0000002a] flex items-end p-8 max-sm:p-4 justify-center">
+              <div className="h-full w-[97vw] max-md:w-full pt-[70px] flex flex-col z-30 relative overflow-hidden max-md:pl-0 pl-[68px] max-md:flex-col">
+                    <div className="h-[44vh] w-full border-b border-[#0000002a] p-8 flex items-end justify-center max-sm:h-full max-sm:p-4">
                         <h1 className="text-[18.5vw] leading-[10vw] font-black font-whyte-inktrap tracking-[-13px] max-md:tracking-normal max-md:text-[16vw]">KEEPERS.</h1>
                     </div>
                     <div className="hidden max-sm:block border-b border-[#0000002a] py-8">
@@ -21,9 +21,9 @@ export const Section7 = () => {
                                 }}
                         />
                     </div>
-                    <div className="h-[42vh]w-full flex flex-col justify-between py-8 px-12 max-sm:flex-row max-sm:p-4">
-                        <span className="font-mono extra-sm-text mt-4 max-md:mt-0 max-sm:w-[35%]">BECOME A KEEPER</span>
-                        <span className="font-normal text-[13px] w-1/5 max-sm:w-[65%] leading-4 block font-whyte-inktrap max-md:place-self-end max-md:text-[13px] max-md:h-full">
+                    <div className="h-[42vh] w-full flex flex-col justify-between py-8 px-12 max-sm:flex-row max-sm:p-4">
+                        <span className="extra-sm-text mt-4 max-md:mt-0 max-sm:w-[35%]">BECOME A KEEPER</span>
+                        <span className="font-normal text-[13px] w-1/5 leading-4 block font-whyte-inktrap max-sm:w-[65%] max-md:place-self-end max-md:text-[13px] max-md:h-full">
                             KPR is a brand that focuses on collective narrative and empowering storytellers. Keepers is a living story
                         </span>
                     </div>

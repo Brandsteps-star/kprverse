@@ -454,12 +454,28 @@
         justify-content: start;
       }
 
+      .absolute-pos {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
       .title {
         font-size: 44px;
         line-height: 44px;
         font-weight: 900;
         letter-spacing: -2px;
       }
+      
       
       @media (max-width: 768px) {
         .title {
@@ -472,6 +488,51 @@
           font-size: 23px;
           line-height: 26px;
           letter-spacing: 0;
+        }
+      }
+
+      .paragraph {
+        font-weight: 400; 
+        text-align: center; 
+        font-size: 17px; 
+        width: 50%; 
+        line-height: 1rem; 
+        display: block; 
+        font-family: 'Whyte Inktrap', sans-serif; 
+      }
+      
+      @media (max-width: 768px) {
+        .paragraph {
+          align-self: end;
+          font-size: 17px; 
+          height: 100%; 
+        }
+      }
+      
+      @media (max-width: 640px) {
+        .paragraph {
+          width: 100%; 
+          line-height: 1.5rem; 
+        }
+      }      
+      
+
+      .paragraph-container {
+        position: absolute;
+        width: 50%;
+        bottom: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      @media (max-width: 640px) {
+        .paragraph-container {
+          width: 80%;
         }
       }
 }
