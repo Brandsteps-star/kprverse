@@ -387,7 +387,7 @@
       }
       @media (width < 768px) {
         .sidebar-item span {
-          line-height: 40px;
+          line-height: 0;
           font-size: 40px;
         }
       }
