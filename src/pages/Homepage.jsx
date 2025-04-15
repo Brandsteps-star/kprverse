@@ -1,20 +1,19 @@
-import { useState, useEffect, useRef } from "react";
-import { Navbar } from "./components/Navbar";
-import { Sidebar } from "./components/Sidebar";
-import { MiniSidebar } from "./components/MiniSidebar";
 import gsap from "gsap";
+import { useState, useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HeroSection } from "./components/HeroSection";
-import { AboutSection } from "./components/AboutSection";
-import {Section3} from "./components/Section3";
-import { Section4 } from "./components/Section4";
-import { Section5 } from "./components/Section5";
-import { Section6 } from "./components/Section6";
-import { Section7 } from "./components/Section7";
-import { PreFooter } from "./components/PreFooter";
-import { Footer } from "./components/Footer";
+import { HeroSection } from "../components/HomePageComponents/HeroSection";
+import { AboutSection } from "../components/HomePageComponents/AboutSection";
+import { Section3 } from "../components/HomePageComponents/Section3";
+import { Section4 } from "../components/HomePageComponents/Section4";
+import { Section5 } from "../components/HomePageComponents/Section5";
+import { Section6 } from "../components/HomePageComponents/Section6";
+import { Section7 } from "../components/HomePageComponents/Section7";
+import { PreFooter } from "../components/common/PreFooter";
+import { Footer } from "../components/common/Footer";
+import { Navbar } from "../components/common/Navbar";
+import { Sidebar } from "../components/common/Sidebar";
+import { MiniSidebar } from "../components/common/MiniSidebar";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 export const Homepage = () => {

@@ -1,4 +1,4 @@
-import ShuffleText from "../effects/ShuffleText";
+import ShuffleText from "../../effects/ShuffleText";
 
 export const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import ShuffleText from "../effects/ShuffleText"
+import ShuffleText from "../../effects/ShuffleText"
 
 gsap.registerPlugin(ScrollTrigger)
 

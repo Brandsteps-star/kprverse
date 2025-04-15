@@ -40,7 +40,7 @@ const MusicBarIcon = ({ color }) => {
       {barHeights.map((scale, index) => (
         <div 
           key={index}
-          className={`mx-[1px] w-[2px] bg-${color} rounded transition-transform duration-200`}
+          className={`mx-[1px] w-[2px] ${color} rounded transition-transform duration-200`}
           style={{ 
             height: '10px', // Base height (adjusted for 20px icon size)
             transform: `scaleY(${scale})`, // Animate up & down

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import ImageTilt from "../effects/ImageTilt"
+import ImageTilt from "../../effects/ImageTilt"
 
 gsap.registerPlugin(ScrollTrigger)
 

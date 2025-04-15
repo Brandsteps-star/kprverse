@@ -1,7 +1,7 @@
-import MusicBarIcon from "../effects/MusicBarIcon"
-import ShuffleText from "../effects/ShuffleText"
-import opensea from '../../public/svg/opensea.svg';
-import logo from '../../public/images/logo.png'
+import MusicBarIcon from "../../effects/MusicBarIcon"
+import ShuffleText from "../../effects/ShuffleText"
+import opensea from '/svg/opensea.svg';
+import logo from '/images/logo.png'
 import { Link } from "react-router-dom";
 
 export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => {

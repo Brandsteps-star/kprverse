@@ -1,5 +1,5 @@
 import gsap from "gsap"
-import ImageTilt from "../effects/ImageTilt"
+import ImageTilt from "../../effects/ImageTilt"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect } from "react"
 
