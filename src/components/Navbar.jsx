@@ -189,7 +189,7 @@ export const Navbar = ({ setIsSidebarOpen, className = '' }) => {
                     <path d="M.867.711h25.634M.867 5.25h21.429"></path>
                 </svg>
             </button>
-            <h2 className='font-whyte-inktrap hidden text-3xl font-bold z-70 max-sm:block '>KPR</h2>
+            <h2 className='font-hexaframe hidden text-4xl m-0 p-0 font-bold z-70 max-sm:block '>KPR</h2>
             <ul className="flex items-center gap-6 z-70 max-sm:hidden">
                 {
                     [
