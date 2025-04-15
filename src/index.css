@@ -533,6 +533,7 @@
       @media (max-width: 640px) {
         .paragraph-container {
           width: 80%;
+          bottom: 4%;
         }
       }
 }
