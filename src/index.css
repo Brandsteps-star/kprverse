@@ -341,6 +341,9 @@
         overflow: hidden;
         display: inline-block;
         padding: 4px;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
       }
       
       .sidebar-item::before {
