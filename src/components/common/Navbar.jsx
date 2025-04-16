@@ -5,7 +5,7 @@ import ShuffleText from "../../effects/ShuffleText"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const Navbar = ({ setIsSidebarOpen, className = '', navborderColor, btnColor, iconColor, menuColor }) => {
+export const Navbar = ({ setIsSidebarOpen, Menu, className = '', navborderColor, btnColor, iconColor, menuColor }) => {
     const navRef = useRef(null);
     const [borderColor, setBorderColor] = useState('border-[#FFFFFF33]');
     const [progressWidth, setProgressWidth] = useState('0%');
@@ -192,12 +192,7 @@ export const Navbar = ({ setIsSidebarOpen, className = '', navborderColor, btnCo
             <h2 className='font-hexaframe hidden text-4xl m-0 p-0 font-bold z-70 max-sm:block '>KPR</h2>
             <ul className="flex items-center gap-6 z-70 max-sm:hidden">
                 {
-                    [
-                        { text: "PROJECT", link: "#project" },
-                        { text: "THE KEEP", link: "#the-keep" },
-                        { text: "FACTIONS", link: "#factions" },
-                        { text: "THE WORLD", link: "#the-world" }
-                    ].map((item, index) => (
+                    Menu.map((item, index) => (
                         <li key={index}>
                             <a href={item.link} className={`small-text nav-item px-2 relative ${menuColor}`}>
                                 <span><ShuffleText text={item.text} /></span>

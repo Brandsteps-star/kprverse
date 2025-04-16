@@ -14,17 +14,17 @@ export const MiniSidebar = ({className = "", LogoColorProp, borderColorProp, ico
 
   useEffect(() => {
 
-    gsap.to(miniSidebarRef.current, {
-      autoAlpha: 0, 
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".footer",
-        start: "top 90%", 
-        end: "top 50%",  
-        scrub: true,
-        toggleActions: "play none none none"
-      }
-    });
+    // gsap.to(miniSidebarRef.current, {
+    //   autoAlpha: 0, 
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".footer",
+    //     start: "top 90%", 
+    //     end: "top 50%",  
+    //     scrub: true,
+    //     toggleActions: "play none none none"
+    //   }
+    // });
   
     ScrollTrigger.create({
       trigger: ".footer",

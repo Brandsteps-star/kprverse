@@ -2,9 +2,10 @@ import MusicBarIcon from "../../effects/MusicBarIcon"
 import ShuffleText from "../../effects/ShuffleText"
 import opensea from '/svg/opensea.svg';
 import logo from '/images/logo.png'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => {
+    const location =  useLocation();
     return(
         
         // isSidebarOpen && 
@@ -29,20 +30,10 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, className = "" }) => 
                                         {name: "MEDIA", path: "/media"},
                                         {name: "GALLERY", path: "/gallery"},
                                         {name: "ABOUT", path: "/about"}
-                                    ].map((item, index) => (
-                                        index == 0 ? (
-                                            
-                                                <Link key={index} to={item.path} className="sidebar-item active">
-                                                    <ShuffleText className="font-black" text={item.name} />
-                                                </Link>
-                                           
-                                        ) : (
-                                            
-                                                <Link key={index} to={item.path} className="sidebar-item">
-                                                    <ShuffleText className="font-black" text={item.name} />
-                                                </Link>
-                                           
-                                        )
+                                    ].map((item, index) => (                                            
+                                        <Link key={index} to={item.path} className={`sidebar-item ${location.pathname == item.path ? 'active' : ''}`}>
+                                            <ShuffleText className="font-black" text={item.name} />
+                                        </Link>
                                     ))
                                 }
                             </ul>

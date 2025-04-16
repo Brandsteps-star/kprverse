@@ -16,12 +16,19 @@ import { MiniSidebar } from "../components/common/MiniSidebar";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const menuItems = [
+  { text: "PROJECT", link: "#project" },
+  { text: "THE KEEP", link: "#the-keep" },
+  { text: "FACTIONS", link: "#factions" },
+  { text: "THE WORLD", link: "#the-world" }
+]
+
 export const Homepage = () => {
       const [borderColor, setBorderColor] = useState('border-[#FFFFFF33]');
       const [isSidebarOpen, setIsSidebarOpen] = useState(false);
       const imgRef = useRef(null);
       const backgroundContainerRef = useRef(null);
-    
+
       useEffect(() => {
     
         gsap.to(backgroundContainerRef.current, {
@@ -200,6 +207,7 @@ export const Homepage = () => {
             <Navbar 
               setIsSidebarOpen={setIsSidebarOpen} 
               className="pointer-events-auto" 
+              Menu={menuItems}
             />
             <Sidebar 
               isSidebarOpen={isSidebarOpen} 
