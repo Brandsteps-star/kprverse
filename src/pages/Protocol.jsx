@@ -28,8 +28,8 @@ export const Protocol = () => {
             
             <Vision />
             <World />
-            {/* <Characters />
-            <Portal />
+            <Characters />
+            {/* <Portal />
             <Union /> */}
             <PreFooter />
             <Footer />
