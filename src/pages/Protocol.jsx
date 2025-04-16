@@ -29,8 +29,8 @@ export const Protocol = () => {
             <Vision />
             <World />
             <Characters />
-            {/* <Portal />
-            <Union /> */}
+            <Portal />
+            {/* <Union /> */}
             <PreFooter />
             <Footer />
             <div className={`fixed z-50 pointer-events-none max-md:!border-none border border-[#ffffff] max-sm:w-full max-sm:h-full max-sm:rounded-none h-[94vh] w-[97vw] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg bg-transparent flex flex-col`}>

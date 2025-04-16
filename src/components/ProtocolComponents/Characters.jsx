@@ -8,7 +8,7 @@ export const Characters = () => {
                 <div className="w-[75%] border-r border-[#ffffff33] p-8 max-sm:p-4 flex flex-col justify-between max-sm:w-full max-sm:gap-12">
                     <div>
                     <span className="extra-sm-text">CHAPTER 03</span>
-                    <h2 className="text-[6rem] leading-[6rem] tracking-tighter font-whyte-inktrap font-black max-sm:text-[3rem] max-sm:leading-[3rem]">
+                    <h2 className="text-[6rem] leading-[6rem] tracking-tighter font-whyte-inktrap font-black max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
                         CHARACTERS
                     </h2>
                     </div>
