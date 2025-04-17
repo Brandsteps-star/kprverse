@@ -11,12 +11,12 @@ export const JournalSection3 = () => {
                     
                     {/* Right */}
                     <div className='h-full w-[74%] border-r border-[#ffffff2a] p-8 max-sm:w-full max-sm:p-4'>
-                        <div className="relative">
-                            <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">To be Continued</span>
+                        <div className="relative max-sm:flex max-sm:flex-col">
+                            <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2 max-sm:relative max-sm:mb-4">To be Continued</span>
                             {
                                 ["The Keepers World", "is ever evolving."].map((item, index) => (
                                 index == 0 ? (
-                                    <h3 key={index} className="section-title title uppercase !text-[4rem] !leading-[4rem] max-sm:!text-[1.5rem] max-sm:!leading-[1.8rem] pl-30">
+                                    <h3 key={index} className="section-title title uppercase !text-[4rem] !leading-[4rem] max-sm:!text-[1.5rem] max-sm:!leading-[1.8rem] pl-30 max-sm:pl-0">
                                     {item}
                                     </h3>
                                 ) : (
