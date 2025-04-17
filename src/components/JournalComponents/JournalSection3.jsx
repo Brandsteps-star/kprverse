@@ -10,7 +10,7 @@ export const JournalSection3 = () => {
                 <div className="h-[50vh] w-full border-t border-[#ffffff2a] flex text-white max-sm:flex-col max-sm:h-full">
                     
                     {/* Right */}
-                    <div className='h-full w-[74%] border-r border-[#ffffff2a] p-8 max-sm:w-full'>
+                    <div className='h-full w-[74%] border-r border-[#ffffff2a] p-8 max-sm:w-full max-sm:p-4'>
                         <div className="relative">
                             <span className="dot pl-2 font-mono extra-sm-text absolute top-2 left-2">To be Continued</span>
                             {

@@ -44,7 +44,7 @@ export const JournalSection2 = () => {
                                 <h2 className="text-[2rem] leading-[1.8rem] max-sm:text-[1.5rem] font-black cursor-pointer tracking-tight mb-8">KPR Narrative Ruleset V0.5</h2>
                                     <ImageTilt 
                                         src="/images/protocol-bg.jpg"
-                                        className="!h-[24rem] max-sm:!h-[20rem] w-full"
+                                        className="!h-[24rem] max-sm:!h-[16rem] w-full"
                                         tiltOptions={{
                                         max: 40,
                                         scale: 1,
@@ -69,7 +69,7 @@ export const JournalSection2 = () => {
                                     <h2 className="text-[2rem] leading-[1.8rem] max-sm:text-[1.5rem] font-black cursor-pointer tracking-tight mb-8">KPR Narrative Ruleset V0.5</h2>
                                         <ImageTilt 
                                             src="/images/protocol-bg.jpg"
-                                            className="!h-[24rem] max-sm:!h-[20rem] w-full"
+                                            className="!h-[24rem] max-sm:!h-[16rem] w-full"
                                             tiltOptions={{
                                             max: 40,
                                             scale: 1,
