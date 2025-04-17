@@ -5,6 +5,7 @@ import { Navbar } from "../components/common/Navbar";
 import { Sidebar } from "../components/common/Sidebar";
 import { MiniSidebar } from "../components/common/MiniSidebar";
 
+const menuItems = []
 export const Gallery = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
@@ -30,6 +31,7 @@ export const Gallery = () => {
           btnColor="!bg-white !text-black"
           menuColor="!text-white"
           iconColor="!stroke-white"
+          Menu={menuItems}
         />
         <Sidebar
           isSidebarOpen={isSidebarOpen}

@@ -5,8 +5,28 @@ import { Journal } from "./pages/Journal";
 import { Media } from "./pages/Media";
 import { Gallery } from "./pages/Gallery";
 import { About } from "./pages/About";
+import { useEffect } from "react";
+import Lenis from "lenis";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 function App() {
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger); // Add this line
+        
+        const lenis = new Lenis()
+        lenis.on("scroll", ScrollTrigger.update)
+    
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 800)
+        })
+        gsap.ticker.lagSmoothing(0);
+    
+        // Cleanup function
+        return () => {
+            lenis.destroy();
+        };
+    }, [])
     return(
       <Router>
           <Routes>

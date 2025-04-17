@@ -5,6 +5,8 @@ import { Navbar } from "../components/common/Navbar";
 import { PreFooter } from "../components/common/PreFooter";
 import { Sidebar } from "../components/common/Sidebar";
 
+const menuItems = []
+
 export const Media = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
@@ -30,6 +32,7 @@ export const Media = () => {
           btnColor="!bg-white !text-black"
           menuColor="!text-white"
           iconColor="!stroke-white"
+          Menu={menuItems}
         />
         <Sidebar
           isSidebarOpen={isSidebarOpen}

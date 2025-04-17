@@ -9,11 +9,10 @@ import { JournalSection2 } from "../components/JournalComponents/JournalSection2
 import { JournalSection3 } from "../components/JournalComponents/JournalSection3";
 
 const menuItems = [
-  { text: "VISION", link: "#vision" },
-  { text: "WORLD", link: "#world" },
-  { text: "CHARACTERS", link: "#characters" },
-  { text: "PROTOCOL", link: "#protocol" },
-  { text: "UNION", link: "#union" }
+  { text: "ALL NEWS", link: "#section2" },
+  { text: "UPDATES", link: "#section2" },
+  { text: "COMMUNITY", link: "#section2" },
+  { text: "FINDERS LAB", link: "#section2" },
 ]
 
 export const Journal = () => {

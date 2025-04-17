@@ -554,6 +554,19 @@
           bottom: 4%;
         }
       }
+      .fixed-heading {
+        background: rgba(0, 0, 0, 0.2);
+        color: white;
+        mix-blend-mode: overlay;
+      }
+      
+      .image-section {
+        scroll-snap-align: start;
+      }
+      
+      .image-container {
+        scroll-snap-type: y mandatory;
+      }
 }
 
 * {
