@@ -9,7 +9,7 @@ export const JournalSection2 = () => {
     return(
         <section className="w-full relative z-20 flex flex-col justify-center font-whyte-inktrap">
             <div className="h-full w-[98vw] max-md:w-full pl-[82px] z-30 flex flex-col relative max-sm:pt-0  max-md:pl-0">
-                <div className="flex w-full h-full mt-8 border-b border-[#0000002a] mb-20 max-sm:flex-col">
+                <div className="flex w-full h-full mt-8 border-b border-[#0000002a] mb-20 max-sm:flex-col max-sm:mb-4">
                     {/* Left Side */}
                     <div className="h-full w-[50%] flex flex-col max-sm:w-full border-r border-[#0000002a]">
                         <div className="h-[50vh] w-full border-b border-[#0000002a] p-8 max-sm:h-full">
