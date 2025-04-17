@@ -58,7 +58,7 @@ export const JournalSection2 = () => {
 
                     {/* Right Side */}
                     <div className="h-full w-[50%] flex flex-col max-sm:w-full">
-                        <div className="h-[80vh] w-full relative group border-b border-[#0000002a] cursor-pointer max-sm:h-full max-sm:border-y">
+                        <div className="h-[80vh] w-full relative group border-b border-[#0000002a] cursor-pointer max-sm:h-full max-sm:border-t max-sm:border-b-0">
                                 <div className="absolute h-full inset-0 rounded-md opacity-0 transition-all duration-200 group-hover:bg-black group-hover:opacity-100 group-hover:scale-[1.01]"></div>
                                 
                                     <div className="w-full h-full p-6 flex flex-col relative z-10  group-hover:text-white transition-colors duration-200">
