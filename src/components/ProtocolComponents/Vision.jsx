@@ -11,7 +11,7 @@ const terminalText = [
 
 export const Vision = () => {
   return (
-    <section className="w-full relative z-20 flex justify-center font-whyte-inktrap">
+    <section className="w-full relative z-20 flex justify-center font-whyte-inktrap" id="vision">
       <div className="h-full w-[97vw] max-md:w-full pl-[68px] pt-[70px] z-30 flex flex-col relative max-sm:pt-0  max-md:pl-0">
         
         {/* First Part */}

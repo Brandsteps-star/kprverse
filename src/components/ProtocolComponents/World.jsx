@@ -1,6 +1,6 @@
 export const World = () => {
   return (
-    <section className="w-full relative z-20 flex justify-center font-whyte-inktrap">
+    <section className="w-full relative z-20 flex justify-center font-whyte-inktrap" id="world">
       <div className="h-full w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] z-30 flex flex-col relative">
         
         {/* First Part */}

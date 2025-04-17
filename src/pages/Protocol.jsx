@@ -15,7 +15,7 @@ const menuItems = [
     { text: "VISION", link: "#vision" },
     { text: "WORLD", link: "#world" },
     { text: "CHARACTERS", link: "#characters" },
-    { text: "PROTOCOL", link: "#protocol" },
+    { text: "PORTAL", link: "#portal" },
     { text: "UNION", link: "#union" }
   ]
 

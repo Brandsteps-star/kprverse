@@ -1,11 +1,11 @@
 export const Portal = () => {
     return(
-        <section className="w-full relative z-20 flex justify-center font-whyte-inktrap">
+        <section className="w-full relative z-20 flex justify-center font-whyte-inktrap" id="portal">
             <div className="h-full w-[97vw] max-md:w-full max-md:pl-0 pl-[68px] z-30 flex flex-col relative">
         
                 {/* First Part */}
                 <div className="w-full h-[70vh] border-b border-[#ffffff33] flex max-sm:h-full">
-                <div className="w-[75%] border-r border-[#ffffff33] p-8 max-sm:p-4 flex flex-col justify-between  max-sm:w-full max-sm:w-full max-sm:gap-12">
+                <div className="w-[75%] border-r border-[#ffffff33] p-8 max-sm:p-4 flex flex-col justify-between  max-sm:w-full max-sm:gap-12">
                     <div>
                         <span className="extra-sm-text">CHAPTER 04</span>
                         <h2 className="text-[6rem] leading-[6rem] tracking-tighter font-whyte-inktrap font-black max-sm:text-[3rem] max-sm:leading-[3rem]">
