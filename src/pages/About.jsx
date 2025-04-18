@@ -6,6 +6,7 @@ import { Sidebar } from "../components/common/Sidebar";
 import { MiniSidebar } from "../components/common/MiniSidebar";
 import { AboutSection1 } from "../components/AboutComponents/AboutSection1";
 import { AboutSection2 } from "../components/AboutComponents/AboutSection2";
+import { JournalSection3 } from "../components/JournalComponents/JournalSection3";
 
 const menuItems = []
 export const About = () => {
@@ -14,6 +15,7 @@ export const About = () => {
     <main className="relative w-full">
       <AboutSection1 />
       <AboutSection2 />
+      <JournalSection3 />
       <PreFooter />
       <Footer />
       <div
